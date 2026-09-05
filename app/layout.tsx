@@ -10,9 +10,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Heartland Industrial Marketing",
+  title: "Marketing Agency for Metals & Manufacturing Companies | Heartland Industrial Marketing",
   description:
-    "Marketing strategy, content, and campaigns built for industrial and manufacturing companies.",
+    "We help metals and manufacturing companies get found, look credible, and win the jobs they're losing today.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

@@ -4,6 +4,13 @@ import { useState, type FormEvent } from "react";
 
 type Status = "idle" | "submitting" | "success" | "error";
 
+const REVENUE_RANGES = [
+  "Under $1M revenue",
+  "$1M to $5M",
+  "$5M to $20M",
+  "$20M+",
+];
+
 export default function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
   const [errorMessage, setErrorMessage] = useState("");
@@ -43,7 +50,7 @@ export default function ContactForm() {
       <div className="rounded-lg border border-green-200 bg-green-50 p-6 text-green-800">
         <p className="font-semibold">Thanks for reaching out!</p>
         <p className="mt-1 text-sm">
-          We received your message and will get back to you shortly.
+          We received your info and will follow up within one business day.
         </p>
       </div>
     );
@@ -54,7 +61,7 @@ export default function ContactForm() {
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
           <label htmlFor="name" className="block text-sm font-medium text-steel">
-            Name
+            Full name
           </label>
           <input
             id="name"
@@ -65,34 +72,56 @@ export default function ContactForm() {
           />
         </div>
         <div>
-          <label htmlFor="company" className="block text-sm font-medium text-steel">
-            Company
+          <label htmlFor="email" className="block text-sm font-medium text-steel">
+            Email
           </label>
           <input
-            id="company"
-            name="company"
-            type="text"
+            id="email"
+            name="email"
+            type="email"
+            required
             className="mt-1 w-full rounded-md border border-black/15 px-3 py-2 text-sm focus:border-brand focus:outline-none focus:ring-1 focus:ring-brand"
           />
         </div>
       </div>
 
-      <div>
-        <label htmlFor="email" className="block text-sm font-medium text-steel">
-          Email
-        </label>
-        <input
-          id="email"
-          name="email"
-          type="email"
-          required
-          className="mt-1 w-full rounded-md border border-black/15 px-3 py-2 text-sm focus:border-brand focus:outline-none focus:ring-1 focus:ring-brand"
-        />
+      <div className="grid gap-5 sm:grid-cols-2">
+        <div>
+          <label htmlFor="phone" className="block text-sm font-medium text-steel">
+            Phone number
+          </label>
+          <input
+            id="phone"
+            name="phone"
+            type="tel"
+            className="mt-1 w-full rounded-md border border-black/15 px-3 py-2 text-sm focus:border-brand focus:outline-none focus:ring-1 focus:ring-brand"
+          />
+        </div>
+        <div>
+          <label htmlFor="revenue" className="block text-sm font-medium text-steel">
+            How big is your operation right now?
+          </label>
+          <select
+            id="revenue"
+            name="revenue"
+            defaultValue=""
+            className="mt-1 w-full rounded-md border border-black/15 bg-white px-3 py-2 text-sm focus:border-brand focus:outline-none focus:ring-1 focus:ring-brand"
+          >
+            <option value="" disabled>
+              Pick a range
+            </option>
+            {REVENUE_RANGES.map((range) => (
+              <option key={range} value={range}>
+                {range}
+              </option>
+            ))}
+          </select>
+        </div>
       </div>
 
       <div>
         <label htmlFor="message" className="block text-sm font-medium text-steel">
-          How can we help?
+          Tell us about your operation
         </label>
         <textarea
           id="message"
@@ -110,9 +139,9 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="rounded-md bg-brand px-6 py-3 font-semibold text-white transition-colors hover:bg-brand-dark disabled:opacity-60"
+        className="rounded-full bg-brand px-6 py-3 font-semibold text-white transition-colors hover:bg-brand-dark disabled:opacity-60"
       >
-        {status === "submitting" ? "Sending..." : "Request a Quote"}
+        {status === "submitting" ? "Sending..." : "Get My Free Audit"}
       </button>
     </form>
   );

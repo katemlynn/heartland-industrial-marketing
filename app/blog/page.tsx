@@ -3,9 +3,9 @@ import Link from "next/link";
 import { getAllPosts } from "@/lib/blog";
 
 export const metadata: Metadata = {
-  title: "Blog | Heartland Industrial Marketing",
+  title: "Marketing Insights for Metals & Material Companies | Heartland Industrial Marketing",
   description:
-    "Marketing insights and resources for manufacturers and industrial companies.",
+    "Practical playbooks for metals manufacturers and material suppliers. No agency BS, no SEO filler — just what we'd actually do for your operation.",
 };
 
 export default function BlogIndexPage() {
@@ -17,11 +17,12 @@ export default function BlogIndexPage() {
         Resources
       </p>
       <h1 className="mt-3 text-3xl font-bold tracking-tight text-steel sm:text-4xl">
-        Blog
+        Insights for metals marketers.
       </h1>
       <p className="mt-4 text-steel-light">
-        Marketing insights for manufacturers, distributors, and industrial
-        service companies.
+        Practical playbooks for metals manufacturers and material suppliers.
+        No agency BS, no SEO filler — just what we&apos;d actually do for
+        your operation.
       </p>
 
       <div className="mt-12 space-y-10">
