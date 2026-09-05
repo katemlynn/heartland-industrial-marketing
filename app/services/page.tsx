@@ -12,12 +12,12 @@ const SERVICES = [
     title: "Full Service Marketing",
     tagline: "Everything below, run as one playbook.",
     description:
-      "When you've outgrown stitching freelancers together. We handle strategy, creative, channels, and reporting under a single retainer with one point of contact (a founder, not an account manager).",
+      "When you've outgrown stitching freelancers together. We handle strategy, creative, channels, and reporting under a single retainer with one point of contact (a senior strategist, not a junior account manager).",
     items: [
       "Quarterly strategy and playbook",
       "Execution across all signed-up channels",
       "Monthly reporting and review call",
-      "Direct founder access",
+      "Direct access to senior strategists",
     ],
   },
   {

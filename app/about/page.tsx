@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "About | Heartland Industrial Marketing",
   description:
-    "Heartland Industrial Marketing partners with metals manufacturers and material suppliers to build marketing that drives real pipeline.",
+    "One industry, done well. Heartland Industrial Marketing partners with metals manufacturers and material suppliers to build marketing that drives real pipeline.",
 };
 
 export default function AboutPage() {
@@ -13,34 +13,31 @@ export default function AboutPage() {
         About Us
       </p>
       <h1 className="mt-3 text-3xl font-bold tracking-tight text-steel sm:text-4xl">
-        Marketing partners who speak metals
+        One industry. Done well.
       </h1>
 
       <div className="mt-8 space-y-6 text-steel-light leading-7">
         <p>
-          {/* TODO(Kate): Replace this placeholder copy with your real founding
-              story, background, and what makes Heartland different. */}
-          Heartland Industrial Marketing was built for one industry: metals
-          manufacturers and material suppliers. Not agencies that dabble in
-          industrial clients between restaurant rebrands and app launches —
-          a team that already knows the patterns, the buyers, and what
-          actually moves the needle for owner-operated shops.
+          Most metals manufacturers and material suppliers end up with a
+          generalist agency that spends the first three months learning the
+          difference between a purlin and a panel — on the client&apos;s
+          dime. Heartland exists to skip that. One industry, run well, beats
+          a jack-of-all-trades agency spread thin across every vertical.
         </p>
         <p>
-          We know the dynamic that generalist agencies miss: you sell the
-          materials, a GC installs them, and the end owner never learns your
-          name. We build marketing around that reality instead of pretending
-          it doesn&apos;t exist — review systems that work when the customer
-          isn&apos;t the one buying, websites built around the specific buyer
-          searching today, and campaigns sequenced so the fast wins show up
-          before the slow ones compound.
+          That focus is also why we stay lean by design. Heartland is a
+          small team of senior marketers, not a bloated retainer padded with
+          account managers and overhead. You get people who&apos;ve already
+          solved the problems specific to metals and manufacturing:
+          contractor-installed products where the end owner never learns
+          your name, sales cycles measured in months, and trade show booths
+          that need to actually pay back.
         </p>
         <p>
-          When you work with Heartland, you get a founder on the call, not an
-          account manager reading off a template. One team running strategy,
-          creative, channels, and reporting together, so nothing falls
-          through the cracks between three different freelancers who never
-          talk to each other.
+          We&apos;d rather run a smaller book of clients well than a large
+          one on autopilot. Senior marketers on your account directly,
+          month to month, no long contracts — not a junior team reading
+          from a generic B2B playbook.
         </p>
       </div>
 

@@ -25,7 +25,7 @@ export default function ContactPage() {
       <ul className="mt-6 space-y-2 text-sm text-steel-light">
         <li className="flex items-start gap-2">
           <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand" />
-          Direct call with a founder, not a salesperson
+          Direct call with a senior strategist, not a salesperson
         </li>
         <li className="flex items-start gap-2">
           <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand" />
