@@ -11,9 +11,12 @@ export default function Footer() {
         </p>
         <div className="mt-8 flex flex-col gap-4 border-t border-white/10 pt-6 text-sm sm:flex-row sm:items-center sm:justify-between">
           <p>&copy; {year} Heartland Industrial Marketing. All rights reserved.</p>
-          <nav className="flex gap-6">
+          <nav className="flex flex-wrap gap-6">
             <Link href="/services" className="hover:text-white">
               Services
+            </Link>
+            <Link href="/marketing-agency-for-manufacturing" className="hover:text-white">
+              For Manufacturing
             </Link>
             <Link href="/about" className="hover:text-white">
               About

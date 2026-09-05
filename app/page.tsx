@@ -206,6 +206,39 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="border-t border-black/10 bg-zinc-50">
+        <div className="mx-auto max-w-6xl px-6 py-20">
+          <p className="text-sm font-semibold uppercase tracking-widest text-brand">
+            Case Study
+          </p>
+          <div className="mt-6 flex flex-col gap-8 sm:flex-row sm:items-center">
+            <div className="flex shrink-0 flex-col items-start rounded-lg bg-steel px-8 py-6 text-white">
+              <span className="text-3xl font-bold text-brand">30 → 75</span>
+              <span className="mt-1 text-sm text-white/70">
+                qualified leads/month in 9 months
+              </span>
+            </div>
+            <div>
+              <h2 className="text-xl font-bold tracking-tight text-steel sm:text-2xl">
+                How we doubled qualified leads for a 30-year-old Oklahoma
+                metals manufacturer.
+              </h2>
+              <p className="mt-2 max-w-2xl text-sm leading-6 text-steel-light">
+                New website, call tracking, a CRM that stopped losing quotes,
+                and a trade show program that actually paid back — rebuilt
+                as one system, not six disconnected projects.
+              </p>
+              <Link
+                href="/marketing-agency-for-manufacturing#case-study"
+                className="mt-4 inline-block text-sm font-semibold text-brand hover:text-brand-dark"
+              >
+                Read the full case study &rarr;
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="mx-auto max-w-6xl px-6 py-20">
         <p className="text-sm font-semibold uppercase tracking-widest text-brand">
           Reviews
