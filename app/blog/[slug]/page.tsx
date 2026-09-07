@@ -16,9 +16,18 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const post = await getPostBySlug(slug);
   if (!post) return {};
 
+  const title = `${post.title} | Heartland Industrial Marketing`;
+
   return {
-    title: `${post.title} | Heartland Industrial Marketing`,
+    title,
     description: post.excerpt,
+    openGraph: {
+      type: "article",
+      title,
+      description: post.excerpt,
+      publishedTime: post.date,
+      images: ["/opengraph-image"],
+    },
   };
 }
 

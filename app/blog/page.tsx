@@ -1,12 +1,11 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import { getAllPosts } from "@/lib/blog";
+import { pageMetadata } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: "Marketing Insights for Metals & Material Companies | Heartland Industrial Marketing",
-  description:
-    "Practical playbooks for metals manufacturers and material suppliers. No agency BS, no SEO filler — just what we'd actually do for your operation.",
-};
+export const metadata = pageMetadata(
+  "Marketing Insights for Metals & Material Companies | Heartland Industrial Marketing",
+  "Practical playbooks for metals manufacturers and material suppliers. No agency BS, no SEO filler — just what we'd actually do for your operation."
+);
 
 export default function BlogIndexPage() {
   const posts = getAllPosts();

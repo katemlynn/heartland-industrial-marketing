@@ -1,11 +1,10 @@
-import type { Metadata } from "next";
 import ContactForm from "@/components/ContactForm";
+import { pageMetadata } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: "Get a Free Audit | Heartland Industrial Marketing",
-  description:
-    "Tell us about your operation. We'll do a quick teardown of your current marketing presence and walk you through what we'd fix first on the call.",
-};
+export const metadata = pageMetadata(
+  "Get a Free Audit | Heartland Industrial Marketing",
+  "Tell us about your operation. We'll do a quick teardown of your current marketing presence and walk you through what we'd fix first on the call."
+);
 
 export default function ContactPage() {
   return (

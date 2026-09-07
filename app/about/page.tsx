@@ -1,10 +1,9 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: "About | Heartland Industrial Marketing",
-  description:
-    "One industry, done well. Heartland Industrial Marketing partners with metals manufacturers and material suppliers to build marketing that drives real pipeline.",
-};
+export const metadata = pageMetadata(
+  "About | Heartland Industrial Marketing",
+  "One industry, done well. Heartland Industrial Marketing partners with metals manufacturers and material suppliers to build marketing that drives real pipeline."
+);
 
 export default function AboutPage() {
   return (

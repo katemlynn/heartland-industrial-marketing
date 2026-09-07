@@ -3,16 +3,38 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { SITE_NAME, SITE_URL } from "@/lib/site";
 
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
 });
 
+const DEFAULT_TITLE =
+  "Marketing Agency for Metals & Manufacturing Companies | Heartland Industrial Marketing";
+const DEFAULT_DESCRIPTION =
+  "We help metals and manufacturing companies get found, look credible, and win the jobs they're losing today.";
+
 export const metadata: Metadata = {
-  title: "Marketing Agency for Metals & Manufacturing Companies | Heartland Industrial Marketing",
-  description:
-    "We help metals and manufacturing companies get found, look credible, and win the jobs they're losing today.",
+  metadataBase: new URL(SITE_URL),
+  title: DEFAULT_TITLE,
+  description: DEFAULT_DESCRIPTION,
+  openGraph: {
+    type: "website",
+    url: SITE_URL,
+    siteName: SITE_NAME,
+    title: DEFAULT_TITLE,
+    description: DEFAULT_DESCRIPTION,
+    locale: "en_US",
+  },
+  // No twitter.title/description here on purpose: X's crawler falls back to
+  // og:title/og:description automatically, and those are already set per
+  // page. Duplicating them here would make every page's Twitter card show
+  // this default instead of its own title, since child pages only override
+  // `openGraph`, not `twitter`.
+  twitter: {
+    card: "summary_large_image",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

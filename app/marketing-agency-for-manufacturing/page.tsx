@@ -1,11 +1,10 @@
-import type { Metadata } from "next";
 import Link from "next/link";
+import { pageMetadata } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: "Marketing Agency for Manufacturing & Metals Companies | Heartland Industrial Marketing",
-  description:
-    "We help metals companies, material suppliers, and manufacturers get found, look credible, and win the jobs they're losing today. Built for one industry.",
-};
+export const metadata = pageMetadata(
+  "Marketing Agency for Manufacturing & Metals Companies | Heartland Industrial Marketing",
+  "We help metals companies, material suppliers, and manufacturers get found, look credible, and win the jobs they're losing today. Built for one industry."
+);
 
 const SEGMENTS = [
   "Metal Building Manufacturers",
