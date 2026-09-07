@@ -47,9 +47,9 @@ export default function ContactForm() {
 
   if (status === "success") {
     return (
-      <div className="rounded-lg border border-green-200 bg-green-50 p-6 text-green-800">
-        <p className="font-semibold">Thanks for reaching out!</p>
-        <p className="mt-1 text-sm">
+      <div className="border border-brand/30 bg-brand/10 p-6">
+        <p className="font-bold text-cream">Thanks for reaching out!</p>
+        <p className="mt-1 text-sm text-white/65">
           We received your info and will follow up within one business day.
         </p>
       </div>
@@ -60,53 +60,31 @@ export default function ContactForm() {
     <form onSubmit={handleSubmit} className="space-y-5">
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
-          <label htmlFor="name" className="block text-sm font-medium text-steel">
+          <label htmlFor="name" className="mb-1.5 block text-sm font-medium text-cream">
             Full name
           </label>
-          <input
-            id="name"
-            name="name"
-            type="text"
-            required
-            className="mt-1 w-full rounded-md border border-black/15 px-3 py-2 text-sm focus:border-brand focus:outline-none focus:ring-1 focus:ring-brand"
-          />
+          <input id="name" name="name" type="text" required className="field" />
         </div>
         <div>
-          <label htmlFor="email" className="block text-sm font-medium text-steel">
+          <label htmlFor="email" className="mb-1.5 block text-sm font-medium text-cream">
             Email
           </label>
-          <input
-            id="email"
-            name="email"
-            type="email"
-            required
-            className="mt-1 w-full rounded-md border border-black/15 px-3 py-2 text-sm focus:border-brand focus:outline-none focus:ring-1 focus:ring-brand"
-          />
+          <input id="email" name="email" type="email" required className="field" />
         </div>
       </div>
 
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
-          <label htmlFor="phone" className="block text-sm font-medium text-steel">
+          <label htmlFor="phone" className="mb-1.5 block text-sm font-medium text-cream">
             Phone number
           </label>
-          <input
-            id="phone"
-            name="phone"
-            type="tel"
-            className="mt-1 w-full rounded-md border border-black/15 px-3 py-2 text-sm focus:border-brand focus:outline-none focus:ring-1 focus:ring-brand"
-          />
+          <input id="phone" name="phone" type="tel" className="field" />
         </div>
         <div>
-          <label htmlFor="revenue" className="block text-sm font-medium text-steel">
+          <label htmlFor="revenue" className="mb-1.5 block text-sm font-medium text-cream">
             How big is your operation right now?
           </label>
-          <select
-            id="revenue"
-            name="revenue"
-            defaultValue=""
-            className="mt-1 w-full rounded-md border border-black/15 bg-white px-3 py-2 text-sm focus:border-brand focus:outline-none focus:ring-1 focus:ring-brand"
-          >
+          <select id="revenue" name="revenue" defaultValue="" className="field">
             <option value="" disabled>
               Pick a range
             </option>
@@ -120,28 +98,16 @@ export default function ContactForm() {
       </div>
 
       <div>
-        <label htmlFor="message" className="block text-sm font-medium text-steel">
+        <label htmlFor="message" className="mb-1.5 block text-sm font-medium text-cream">
           Tell us about your operation
         </label>
-        <textarea
-          id="message"
-          name="message"
-          rows={5}
-          required
-          className="mt-1 w-full rounded-md border border-black/15 px-3 py-2 text-sm focus:border-brand focus:outline-none focus:ring-1 focus:ring-brand"
-        />
+        <textarea id="message" name="message" rows={5} required className="field" />
       </div>
 
-      {status === "error" && (
-        <p className="text-sm text-red-600">{errorMessage}</p>
-      )}
+      {status === "error" && <p className="text-sm text-red-400">{errorMessage}</p>}
 
-      <button
-        type="submit"
-        disabled={status === "submitting"}
-        className="rounded-full bg-brand px-6 py-3 font-semibold text-white transition-colors hover:bg-brand-dark disabled:opacity-60"
-      >
-        {status === "submitting" ? "Sending..." : "Get My Free Audit"}
+      <button type="submit" disabled={status === "submitting"} className="btn btn-solid disabled:opacity-60">
+        <span>{status === "submitting" ? "Sending..." : "Get My Free Audit"}</span>
       </button>
     </form>
   );

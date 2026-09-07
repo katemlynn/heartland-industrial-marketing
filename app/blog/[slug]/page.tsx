@@ -38,26 +38,28 @@ export default async function BlogPostPage({ params }: PageProps) {
   if (!post) notFound();
 
   return (
-    <div className="mx-auto max-w-3xl px-6 py-16">
-      <Link href="/blog" className="text-sm font-semibold text-brand hover:text-brand-dark">
-        &larr; Back to Blog
-      </Link>
+    <div className="bg-steel">
+      <div className="mx-auto max-w-2xl px-6 py-24 lg:px-14">
+        <Link href="/blog" className="text-sm font-semibold text-brand hover:text-white">
+          &larr; Back to Blog
+        </Link>
 
-      <time className="mt-6 block text-xs uppercase tracking-wide text-steel-light">
-        {new Date(`${post.date}T00:00:00`).toLocaleDateString("en-US", {
-          year: "numeric",
-          month: "long",
-          day: "numeric",
-        })}
-      </time>
-      <h1 className="mt-2 text-3xl font-bold tracking-tight text-steel sm:text-4xl">
-        {post.title}
-      </h1>
+        <time className="mt-8 block font-label text-[11px] font-medium tracking-[0.18em] text-white/40 uppercase">
+          {new Date(`${post.date}T00:00:00`).toLocaleDateString("en-US", {
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+          })}
+        </time>
+        <h1 className="mt-2.5 text-3xl font-extrabold tracking-tight text-cream sm:text-4xl">
+          {post.title}
+        </h1>
 
-      <div
-        className="prose prose-neutral mt-8 max-w-none prose-headings:text-steel prose-a:text-brand"
-        dangerouslySetInnerHTML={{ __html: post.contentHtml }}
-      />
+        <div
+          className="prose prose-invert mt-9 max-w-none prose-headings:font-extrabold prose-headings:tracking-tight prose-headings:text-cream prose-p:text-white/62 prose-a:text-brand prose-a:no-underline hover:prose-a:text-white prose-strong:text-cream prose-li:text-white/62 prose-blockquote:border-brand prose-blockquote:text-white/70"
+          dangerouslySetInnerHTML={{ __html: post.contentHtml }}
+        />
+      </div>
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { pageMetadata } from "@/lib/site";
 import ServicesAccordion from "@/components/ServicesAccordion";
+import PageHeader from "@/components/PageHeader";
 
 export const metadata = pageMetadata(
   "Marketing Services for Metals & Material Companies | Heartland Industrial Marketing",
@@ -147,25 +148,11 @@ function ArrowIcon() {
 export default function ServicesPage() {
   return (
     <div className="bg-steel">
-      <header className="relative overflow-hidden px-6 pt-24 pb-20 lg:px-14">
-        <div
-          className="absolute inset-0 z-0"
-          style={{
-            backgroundImage:
-              "repeating-linear-gradient(90deg, rgba(244,242,238,0.05) 0px, rgba(244,242,238,0.05) 1px, transparent 1px, transparent 88px), repeating-linear-gradient(0deg, rgba(244,242,238,0.05) 0px, rgba(244,242,238,0.05) 1px, transparent 1px, transparent 88px)",
-            maskImage: "linear-gradient(180deg, rgba(0,0,0,0.85), rgba(0,0,0,0.1))",
-          }}
-        />
-        <p className="relative z-[2] font-label text-[13px] font-semibold tracking-[0.32em] text-brand uppercase">
-          &mdash; Services
-        </p>
-        <h1 className="relative z-[2] mt-3 max-w-xl text-4xl font-extrabold tracking-tight text-cream sm:text-5xl">
-          The full playbook, built for metals.
-        </h1>
-        <p className="relative z-[2] mt-4 max-w-md text-lg text-white/65">
-          Engagements are bundled to fit your company, not sold à la carte.
-        </p>
-      </header>
+      <PageHeader
+        eyebrow="Services"
+        title="The full playbook, built for metals."
+        description="Engagements are bundled to fit your company, not sold à la carte."
+      />
 
       <section className="border-t border-white/8 px-6 py-24 lg:px-14">
         <ServicesAccordion services={SERVICES} />

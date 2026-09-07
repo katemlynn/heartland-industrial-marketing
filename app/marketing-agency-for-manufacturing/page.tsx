@@ -32,76 +32,96 @@ const CASE_STUDY_STATS = [
   { value: "Multiple", label: "New markets entered — geographic expansion without overhead bloat" },
 ];
 
+function ArrowIcon() {
+  return (
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+      <path
+        d="M3 8h10M9 4l4 4-4 4"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
 export default function ManufacturingPage() {
   return (
-    <>
-      <section className="bg-steel text-white">
-        <div className="mx-auto max-w-6xl px-6 py-24">
-          <p className="text-sm font-semibold uppercase tracking-widest text-brand">
-            Marketing for Manufacturers &amp; Metals Companies
+    <div className="bg-steel text-white">
+      <section className="relative overflow-hidden px-6 py-24 lg:px-14">
+        <div
+          className="absolute inset-0 z-0"
+          style={{
+            backgroundImage:
+              "repeating-linear-gradient(90deg, rgba(244,242,238,0.05) 0px, rgba(244,242,238,0.05) 1px, transparent 1px, transparent 88px), repeating-linear-gradient(0deg, rgba(244,242,238,0.05) 0px, rgba(244,242,238,0.05) 1px, transparent 1px, transparent 88px)",
+            maskImage: "linear-gradient(180deg, rgba(0,0,0,0.85), rgba(0,0,0,0.1))",
+          }}
+        />
+        <div className="relative z-[2] mx-auto max-w-6xl">
+          <p className="font-label text-[13px] font-semibold tracking-[0.32em] text-brand uppercase">
+            &mdash; Marketing for Manufacturers &amp; Metals Companies
           </p>
-          <h1 className="mt-4 max-w-2xl text-4xl font-bold tracking-tight sm:text-5xl">
+          <h1 className="mt-4 max-w-2xl text-4xl font-extrabold tracking-tight text-cream sm:text-5xl">
             Marketing Agency for Manufacturing &amp; Metals Companies
           </h1>
-          <p className="mt-6 max-w-xl text-lg text-white/80">
+          <p className="mt-6 max-w-xl text-lg text-white/68">
             We help metals companies, material suppliers, and manufacturers
             get found, look credible, and win the jobs they&apos;re losing
             today. Built for one industry. Run by senior marketers. Month to
             month, no long contracts.
           </p>
-          <div className="mt-10 flex flex-wrap gap-4">
-            <Link
-              href="/contact"
-              className="rounded-full bg-brand px-6 py-3 font-semibold text-white transition-colors hover:bg-brand-dark"
-            >
-              Get a Free Audit
+          <div className="mt-10 flex flex-wrap gap-[18px]">
+            <Link href="/contact" className="btn btn-solid">
+              <span>Get a Free Audit</span>
+              <ArrowIcon />
             </Link>
-            <Link
-              href="/services"
-              className="rounded-full border border-white/30 px-6 py-3 font-semibold text-white transition-colors hover:bg-white/10"
-            >
-              See Our Services
+            <Link href="/services" className="btn btn-ghost">
+              <span>See Our Services</span>
+              <ArrowIcon />
             </Link>
           </div>
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-6 py-20">
-        <p className="text-sm font-semibold uppercase tracking-widest text-brand">
-          Who We Serve
-        </p>
-        <h2 className="mt-2 max-w-2xl text-2xl font-bold tracking-tight text-steel sm:text-3xl">
-          Built for one industry. We already know what moves the needle.
-        </h2>
-        <p className="mt-4 max-w-2xl text-steel-light">
-          Generalist agencies spend their first three months learning your
-          business on your dime. We start work knowing the difference
-          between a purlin and a panel, what FABTECH costs to exhibit at,
-          and why your end customer often doesn&apos;t know your name.
-        </p>
-        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {SEGMENTS.map((segment, index) => (
-            <div key={segment} className="rounded-lg border border-black/10 p-5">
-              <span className="text-xs font-semibold text-brand">
-                {String(index + 1).padStart(2, "0")}
-              </span>
-              <p className="mt-1 text-sm font-semibold text-steel">{segment}</p>
-            </div>
-          ))}
+      <section className="border-t border-white/8 px-6 py-24 lg:px-14">
+        <div className="mx-auto max-w-6xl">
+          <p className="font-label text-[13px] font-semibold tracking-[0.32em] text-brand uppercase">
+            &mdash; Who We Serve
+          </p>
+          <h2 className="mt-3 max-w-2xl text-3xl font-extrabold tracking-tight text-cream sm:text-4xl">
+            Built for one industry. We already know what moves the needle.
+          </h2>
+          <p className="mt-4 max-w-2xl text-white/62">
+            Generalist agencies spend their first three months learning your
+            business on your dime. We start work knowing the difference
+            between a purlin and a panel, what FABTECH costs to exhibit at,
+            and why your end customer often doesn&apos;t know your name.
+          </p>
+          <div className="mt-11 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {SEGMENTS.map((segment, index) => (
+              <div key={segment} className="border border-white/16 p-5">
+                <span className="font-label text-xs font-semibold text-brand">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <p className="mt-1.5 text-sm font-semibold text-cream">{segment}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
-      <section id="case-study" className="border-t border-black/10 bg-zinc-50">
-        <div className="mx-auto max-w-3xl px-6 py-20">
-          <p className="text-sm font-semibold uppercase tracking-widest text-brand">
-            Case Study &middot; 18 Months
+      <section id="case-study" className="border-t border-white/8 px-6 py-24 lg:px-14">
+        <div className="mx-auto max-w-3xl">
+          <p className="font-label text-[13px] font-semibold tracking-[0.32em] text-brand uppercase">
+            &mdash; Case Study &middot; 18 Months
           </p>
-          <h2 className="mt-2 text-2xl font-bold tracking-tight text-steel sm:text-3xl">
+          <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-cream sm:text-4xl">
             How we doubled qualified leads for a 30-year-old Oklahoma metals
             manufacturer.
           </h2>
 
-          <div className="mt-6 space-y-4 text-steel-light leading-7">
+          <div className="mt-7 space-y-4 leading-relaxed text-white/62">
             <p>
               A family-run Oklahoma metal fabricator manufactures metal
               building kits, roofing systems, and laser-cut components from
@@ -115,8 +135,8 @@ export default function ManufacturingPage() {
             </p>
             <ul className="space-y-2">
               {CASE_STUDY_WORK.map((item) => (
-                <li key={item} className="flex items-start gap-2">
-                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand" />
+                <li key={item} className="flex items-start gap-2.5">
+                  <span className="mt-1.5 h-[5px] w-[5px] shrink-0 bg-brand" />
                   {item}
                 </li>
               ))}
@@ -129,46 +149,42 @@ export default function ManufacturingPage() {
             </p>
           </div>
 
-          <div className="mt-10 grid gap-6 sm:grid-cols-3">
+          <div className="mt-11 grid gap-5 sm:grid-cols-3">
             {CASE_STUDY_STATS.map((stat) => (
-              <div key={stat.label} className="rounded-lg border border-black/10 bg-white p-6">
-                <p className="text-2xl font-bold text-brand">{stat.value}</p>
-                <p className="mt-1 text-sm text-steel-light">{stat.label}</p>
+              <div key={stat.label} className="border border-white/16 bg-white/[0.02] p-6">
+                <p className="text-2xl font-extrabold text-brand">{stat.value}</p>
+                <p className="mt-1.5 text-sm text-white/58">{stat.label}</p>
               </div>
             ))}
           </div>
 
-          <blockquote className="mt-10 rounded-lg border border-black/10 bg-white p-6">
-            <p className="text-steel">
+          <blockquote className="mt-11 border border-white/16 bg-white/[0.02] p-7">
+            <p className="text-cream">
               &ldquo;Heartland rebuilt our site, set up our CRM, and grew our
               qualified leads from 30 to 75 a month. They feel like part of
               our team, not a vendor.&rdquo;
             </p>
-            <footer className="mt-3 text-sm font-medium text-steel-light">
+            <footer className="mt-3 text-sm font-medium text-white/50">
               — Owner, Oklahoma-based Metal Fabricator
             </footer>
           </blockquote>
         </div>
       </section>
 
-      <section className="bg-steel text-white">
-        <div className="mx-auto max-w-6xl px-6 py-16 text-center">
-          <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">
-            Want results like this for your operation?
-          </h2>
-          <p className="mx-auto mt-3 max-w-xl text-white/80">
-            Tell us about your company. We&apos;ll do a quick teardown of
-            your current marketing and walk you through what we&apos;d fix
-            first on the call.
-          </p>
-          <Link
-            href="/contact"
-            className="mt-8 inline-block rounded-full bg-brand px-6 py-3 font-semibold text-white transition-colors hover:bg-brand-dark"
-          >
-            Get a Free Audit
-          </Link>
-        </div>
+      <section className="border-t border-white/8 px-6 py-20 text-center lg:px-14">
+        <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
+          Want results like this for your operation?
+        </h2>
+        <p className="mx-auto mt-3 max-w-xl text-white/65">
+          Tell us about your company. We&apos;ll do a quick teardown of your
+          current marketing and walk you through what we&apos;d fix first on
+          the call.
+        </p>
+        <Link href="/contact" className="btn btn-solid mt-9">
+          <span>Get a Free Audit</span>
+          <ArrowIcon />
+        </Link>
       </section>
-    </>
+    </div>
   );
 }

@@ -132,3 +132,24 @@ body {
 .btn-ghost:hover {
   border-color: rgba(244, 242, 238, 0.7);
 }
+
+.field {
+  width: 100%;
+  background: rgba(244, 242, 238, 0.04);
+  border: 1px solid rgba(244, 242, 238, 0.18);
+  color: var(--cream);
+  padding: 0.65rem 0.85rem;
+  font-size: 0.875rem;
+}
+.field::placeholder {
+  color: rgba(244, 242, 238, 0.32);
+}
+.field:focus {
+  outline: none;
+  border-color: var(--brand);
+  background: rgba(244, 242, 238, 0.06);
+}
+select.field option {
+  background: var(--steel);
+  color: var(--cream);
+}
