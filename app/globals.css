@@ -8,6 +8,8 @@
   --brand-dark: #b83a25;
   --steel: #0c0d0f;
   --steel-light: #4a5568;
+  --cream: #f4f2ee;
+  --ink: #14161a;
 }
 
 @theme inline {
@@ -17,11 +19,116 @@
   --color-brand-dark: var(--brand-dark);
   --color-steel: var(--steel);
   --color-steel-light: var(--steel-light);
-  --font-sans: var(--font-inter);
+  --color-cream: var(--cream);
+  --color-ink: var(--ink);
+  --font-sans: var(--font-archivo);
+  --font-label: var(--font-oswald);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+@keyframes heroDrift {
+  from {
+    transform: scale(1.04) translate(0, 0);
+  }
+  to {
+    transform: scale(1.1) translate(-1%, -1%);
+  }
+}
+
+@keyframes heroRise {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scrollCue {
+  0% {
+    top: -20px;
+  }
+  60% {
+    top: 56px;
+  }
+  100% {
+    top: 56px;
+  }
+}
+
+@keyframes marqueeScroll {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50%);
+  }
+}
+
+.btn {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 1.05rem 1.75rem;
+  font-family: var(--font-label);
+  font-weight: 600;
+  font-size: 0.8125rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.btn span,
+.btn svg {
+  position: relative;
+  z-index: 2;
+  transition: color 0.3s ease, transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.btn:hover svg {
+  transform: translateX(4px);
+}
+.btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.btn:hover::before {
+  transform: scaleX(1);
+}
+
+.btn-solid {
+  background: var(--brand);
+  color: var(--cream);
+  border: 1px solid var(--brand);
+}
+.btn-solid::before {
+  background: var(--cream);
+}
+.btn-solid:hover span,
+.btn-solid:hover svg {
+  color: var(--steel);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--cream);
+  border: 1px solid rgba(244, 242, 238, 0.35);
+}
+.btn-ghost::before {
+  background: rgba(244, 242, 238, 0.08);
+}
+.btn-ghost:hover {
+  border-color: rgba(244, 242, 238, 0.7);
 }

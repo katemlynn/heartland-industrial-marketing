@@ -11,7 +11,7 @@ const NAV_LINKS = [
 export default function Header() {
   return (
     <header className="border-b border-white/10 bg-steel text-white">
-      <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-6 py-4">
+      <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-6 px-6 py-6 lg:px-14">
         <Link href="/" className="shrink-0">
           <Image
             src="/heartland-logo-white.png"
@@ -22,21 +22,19 @@ export default function Header() {
             className="h-9 w-auto"
           />
         </Link>
-        <nav className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm font-medium">
+        <nav className="flex flex-wrap items-center gap-x-10 gap-y-2 font-label text-[13px] font-medium tracking-[0.14em] uppercase">
           {NAV_LINKS.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="text-white/80 transition-colors hover:text-white"
+              className="group relative pb-1 text-white/70 transition-colors hover:text-white"
             >
               {link.label}
+              <span className="absolute inset-x-0 -bottom-px h-px origin-left scale-x-0 bg-brand transition-transform duration-300 group-hover:scale-x-100" />
             </Link>
           ))}
-          <Link
-            href="/contact"
-            className="rounded-full bg-brand px-5 py-2 font-semibold text-white transition-colors hover:bg-brand-dark"
-          >
-            Get a Free Audit
+          <Link href="/contact" className="btn btn-solid">
+            <span>Get a Free Audit</span>
           </Link>
         </nav>
       </div>

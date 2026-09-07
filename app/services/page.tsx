@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { pageMetadata } from "@/lib/site";
+import ServicesAccordion from "@/components/ServicesAccordion";
 
 export const metadata = pageMetadata(
   "Marketing Services for Metals & Material Companies | Heartland Industrial Marketing",
@@ -129,55 +130,61 @@ const SERVICES = [
   },
 ];
 
+function ArrowIcon() {
+  return (
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+      <path
+        d="M3 8h10M9 4l4 4-4 4"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
 export default function ServicesPage() {
   return (
-    <div className="mx-auto max-w-6xl px-6 py-16">
-      <p className="text-sm font-semibold uppercase tracking-widest text-brand">
-        Services
-      </p>
-      <h1 className="mt-3 text-3xl font-bold tracking-tight text-steel sm:text-4xl">
-        The full playbook, built for metals.
-      </h1>
-      <p className="mt-4 max-w-2xl text-steel-light">
-        Engagements are bundled to fit your company, not sold à la carte.
-      </p>
+    <div className="bg-steel">
+      <header className="relative overflow-hidden px-6 pt-24 pb-20 lg:px-14">
+        <div
+          className="absolute inset-0 z-0"
+          style={{
+            backgroundImage:
+              "repeating-linear-gradient(90deg, rgba(244,242,238,0.05) 0px, rgba(244,242,238,0.05) 1px, transparent 1px, transparent 88px), repeating-linear-gradient(0deg, rgba(244,242,238,0.05) 0px, rgba(244,242,238,0.05) 1px, transparent 1px, transparent 88px)",
+            maskImage: "linear-gradient(180deg, rgba(0,0,0,0.85), rgba(0,0,0,0.1))",
+          }}
+        />
+        <p className="relative z-[2] font-label text-[13px] font-semibold tracking-[0.32em] text-brand uppercase">
+          &mdash; Services
+        </p>
+        <h1 className="relative z-[2] mt-3 max-w-xl text-4xl font-extrabold tracking-tight text-cream sm:text-5xl">
+          The full playbook, built for metals.
+        </h1>
+        <p className="relative z-[2] mt-4 max-w-md text-lg text-white/65">
+          Engagements are bundled to fit your company, not sold à la carte.
+        </p>
+      </header>
 
-      <div className="mt-12 grid gap-8 sm:grid-cols-2">
-        {SERVICES.map((service) => (
-          <div key={service.title} className="rounded-lg border border-black/10 p-8">
-            <h2 className="text-xl font-semibold text-steel">{service.title}</h2>
-            <p className="mt-1 text-sm font-medium text-brand">{service.tagline}</p>
-            <p className="mt-3 text-sm leading-6 text-steel-light">
-              {service.description}
-            </p>
-            <ul className="mt-4 space-y-2 text-sm text-steel-light">
-              {service.items.map((item) => (
-                <li key={item} className="flex items-start gap-2">
-                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand" />
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
-      </div>
+      <section className="border-t border-white/8 px-6 py-24 lg:px-14">
+        <ServicesAccordion services={SERVICES} />
+      </section>
 
-      <div className="mt-16 rounded-lg bg-steel px-8 py-10 text-center text-white">
-        <h2 className="text-xl font-bold">
+      <section className="border-t border-white/8 px-6 py-20 text-center lg:px-14">
+        <h2 className="text-3xl font-extrabold tracking-tight text-cream sm:text-4xl">
           Want to see how this fits your operation?
         </h2>
-        <p className="mx-auto mt-2 max-w-xl text-white/80">
+        <p className="mx-auto mt-3 max-w-md text-white/62">
           Tell us about your company. We&apos;ll do a quick teardown of your
           current marketing and walk you through what we&apos;d fix first on
           the call.
         </p>
-        <Link
-          href="/contact"
-          className="mt-6 inline-block rounded-full bg-brand px-6 py-3 font-semibold text-white transition-colors hover:bg-brand-dark"
-        >
-          Get a Free Audit
+        <Link href="/contact" className="btn btn-solid mt-8">
+          <span>Get a Free Audit</span>
+          <ArrowIcon />
         </Link>
-      </div>
+      </section>
     </div>
   );
 }
