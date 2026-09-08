@@ -32,9 +32,12 @@ export default function Footer() {
         </nav>
       </div>
       <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 pt-7">
-        <p className="text-[13px] text-white/40">
-          &copy; {year} Heartland Industrial Marketing. All rights reserved.
-        </p>
+        <div className="flex flex-wrap items-center gap-x-5 gap-y-1 text-[13px] text-white/40">
+          <p>&copy; {year} Heartland Industrial Marketing. All rights reserved.</p>
+          <Link href="/privacy" className="transition-colors hover:text-white/70">
+            Privacy Policy
+          </Link>
+        </div>
         <Image
           src="/heartland-logo-white.png"
           alt="Heartland Industrial Marketing"
