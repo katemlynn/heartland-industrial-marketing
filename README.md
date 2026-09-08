@@ -43,25 +43,38 @@ up on the `/blog` index page.
 ## Editing page content
 
 Each page's text lives directly in its `page.tsx` file as plain text/JSX —
-for example, home page copy is in `app/page.tsx`, and the About page copy
-(currently placeholder text marked with a `TODO(Kate)` comment) is in
-`app/about/page.tsx`.
+for example, home page copy is in `app/page.tsx`, and the About page copy is
+in `app/about/page.tsx`.
 
 ## Contact form
 
-The "Request a Quote" form on `/contact` submits to `app/api/contact/route.ts`.
-Right now, submissions are only logged to the server console — no emails are
-sent yet. To actually receive leads by email, you'll need to:
+The "Get a Free Audit" form on `/contact` submits to
+`app/api/contact/route.ts`, which sends a notification email via
+[Resend](https://resend.com). Until it's configured, submissions just log to
+the server console instead of failing — safe for local development, but you
+do need to finish setup before real leads start submitting the form.
 
-1. Choose an email-sending service (e.g. [Resend](https://resend.com),
-   Postmark, or SendGrid) and create an account with them.
-2. Add your API key to a `.env.local` file in this project (this file is
-   already excluded from git via `.gitignore`, so your key stays private).
-3. Update `app/api/contact/route.ts` to send an email using that provider's
-   API instead of just logging to the console.
+To turn on real email delivery:
 
-This is intentionally left as a manual step since it involves creating an
-account and handling an API key.
+1. Create a free account at [resend.com](https://resend.com) (free tier
+   covers 3,000 emails/month — plenty for a contact form).
+2. Create an API key at [resend.com/api-keys](https://resend.com/api-keys).
+3. Copy `.env.example` to a new file named `.env.local` in the project root,
+   and paste your API key into `RESEND_API_KEY`. `.env.local` is already
+   excluded from git, so the key never gets committed.
+4. Restart `npm run dev` (or redeploy, in production) so the new environment
+   variable is picked up.
+
+That's it — submissions will start arriving at the address in
+`CONTACT_EMAIL_TO` (also set in `.env.local`), with the sender's own address
+set as reply-to so you can just hit reply.
+
+By default, emails send from Resend's shared `onboarding@resend.dev`
+address, which works immediately but looks a little less polished. Once
+you're ready, you can [verify your own domain in
+Resend](https://resend.com/domains) (adds a couple of DNS records at your
+domain registrar) and set `CONTACT_EMAIL_FROM` in `.env.local` to send from
+an address like `leads@heartlandindustrialmarketing.com` instead.
 
 ## Building for production
 
