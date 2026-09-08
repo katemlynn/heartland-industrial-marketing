@@ -56,6 +56,7 @@ export default function ManufacturingPage() {
             backgroundImage:
               "repeating-linear-gradient(90deg, rgba(244,242,238,0.05) 0px, rgba(244,242,238,0.05) 1px, transparent 1px, transparent 88px), repeating-linear-gradient(0deg, rgba(244,242,238,0.05) 0px, rgba(244,242,238,0.05) 1px, transparent 1px, transparent 88px)",
             maskImage: "linear-gradient(180deg, rgba(0,0,0,0.85), rgba(0,0,0,0.1))",
+            WebkitMaskImage: "linear-gradient(180deg, rgba(0,0,0,0.85), rgba(0,0,0,0.1))",
           }}
         />
         <div className="relative z-[2] mx-auto max-w-6xl">
@@ -68,7 +69,7 @@ export default function ManufacturingPage() {
           <p className="mt-6 max-w-xl text-lg text-white/68">
             We help metals companies, material suppliers, and manufacturers
             get found, look credible, and win the jobs they&apos;re losing
-            today. Built for one industry. Run by senior marketers. Month to
+            today. Built for one industry. No junior hand-offs. Month to
             month, no long contracts.
           </p>
           <div className="mt-10 flex flex-wrap gap-[18px]">
