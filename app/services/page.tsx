@@ -80,7 +80,7 @@ export default function ServicesPage() {
     <div className="bg-steel">
       <PageHeader
         eyebrow="Services"
-        title="The full playbook, built for metals."
+        title="The full playbook, built for one industry."
         description="Engagements are bundled to fit your company, not sold à la carte."
       />
 
