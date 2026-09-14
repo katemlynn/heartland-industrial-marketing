@@ -372,13 +372,13 @@ export default function Home() {
         <div className="mx-auto max-w-6xl">
           {/* Spotlight */}
           <div className="grid gap-10 border-b border-white/12 pb-16 lg:grid-cols-2 lg:items-center">
-            <div className="relative h-[280px] overflow-hidden border border-white/10 lg:h-[380px]">
+            <div className="group relative h-[280px] overflow-hidden border border-white/10 lg:h-[380px]">
               <Image
                 src="/testimonial-welder.jpg"
                 alt="A welder fabricating a steel beam at a Heartland client's shop"
                 fill
                 sizes="(min-width: 1024px) 50vw, 100vw"
-                className="object-cover"
+                className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                 style={{ objectPosition: "center 35%" }}
               />
               <div
@@ -474,7 +474,7 @@ export default function Home() {
                 <figure
                   key={`${t.name}-${i}`}
                   aria-hidden={i >= TESTIMONIALS.length}
-                  className="border border-white/14 bg-white/[0.02] p-7"
+                  className="border border-white/14 bg-white/[0.02] p-7 transition-colors duration-300 hover:border-white/28 hover:bg-white/[0.05]"
                 >
                   <figcaption className="mb-4 flex items-center gap-3.5">
                     <span className="flex h-[38px] w-[38px] shrink-0 items-center justify-center border border-brand font-mono-tag text-xs font-medium text-brand">
