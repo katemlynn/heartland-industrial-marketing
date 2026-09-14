@@ -6,7 +6,6 @@ import Reveal from "@/components/Reveal";
 interface Service {
   title: string;
   description: string;
-  items: string[];
 }
 
 export default function ServicesAccordion({ services }: { services: Service[] }) {
@@ -56,16 +55,9 @@ export default function ServicesAccordion({ services }: { services: Service[] })
               >
                 <div className="overflow-hidden">
                   <div className="px-4 pb-8 pl-[72px]">
-                    <p className="mb-4 max-w-xl font-body text-[15px] leading-relaxed text-white/60">
+                    <p className="max-w-xl font-body text-[15px] leading-relaxed text-white/60">
                       {service.description}
                     </p>
-                    <ul className="grid max-w-2xl grid-cols-1 gap-x-8 gap-y-2.5 font-body sm:grid-cols-2">
-                      {service.items.map((item) => (
-                        <li key={item} className="text-sm text-white/68">
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
                   </div>
                 </div>
               </div>
