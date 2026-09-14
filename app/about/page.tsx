@@ -9,7 +9,11 @@ export const metadata = pageMetadata(
 export default function AboutPage() {
   return (
     <div className="bg-steel">
-      <PageHeader eyebrow="About Us" title="One industry. Done well." />
+      <PageHeader
+        eyebrow="About Us"
+        title="One industry. Done well."
+        description="We partner with metals manufacturers and material suppliers to build marketing systems that generate leads and drive long-term growth."
+      />
 
       <div className="mx-auto max-w-2xl px-6 pb-24 lg:px-14">
         <div className="space-y-6 font-body leading-7 text-white/62">

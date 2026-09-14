@@ -334,11 +334,11 @@ export default function Home() {
           >
             <div className="shrink-0">
               <div className="flex items-baseline gap-2.5">
-                <span className="text-5xl font-black tracking-tight text-brand lg:text-6xl">
+                <span className="text-3xl font-bold tracking-tight text-ink/35 lg:text-4xl">
                   30
                 </span>
                 <span className="text-2xl font-light text-ink/30">&rarr;</span>
-                <span className="text-5xl font-black tracking-tight text-ink lg:text-6xl">
+                <span className="text-5xl font-black tracking-tight text-brand lg:text-6xl">
                   75
                 </span>
               </div>
@@ -357,11 +357,11 @@ export default function Home() {
                 and a trade show program that actually paid back — rebuilt
                 as one system, not six disconnected projects.
               </p>
+              <span className="mt-4 flex items-center gap-2 font-body text-sm font-semibold text-brand">
+                Read the case study
+                <ArrowIcon className="transition-transform group-hover:translate-x-1" />
+              </span>
             </div>
-            <span className="flex shrink-0 items-center gap-2 font-body text-sm font-semibold text-brand sm:self-start">
-              Read the case study
-              <ArrowIcon className="transition-transform group-hover:translate-x-1" />
-            </span>
           </Link>
         </div>
       </section>
