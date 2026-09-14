@@ -205,7 +205,7 @@ export default function Home() {
           Stop losing sales to competitors who just market better.
         </h1>
         <p
-          className="relative z-[2] mt-8 max-w-xl text-lg leading-relaxed text-white/68 opacity-0 [animation:heroRise_0.8s_ease_forwards] [animation-delay:0.36s]"
+          className="relative z-[2] mt-8 max-w-xl font-body text-lg leading-relaxed text-white/68 opacity-0 [animation:heroRise_0.8s_ease_forwards] [animation-delay:0.36s]"
         >
           We help metals and manufacturing companies get found, look
           credible, and win the jobs they&apos;re losing today.
@@ -223,11 +223,34 @@ export default function Home() {
           </Link>
         </div>
 
-        <div className="absolute right-6 bottom-10 z-[2] hidden flex-col items-center gap-3.5 font-label text-[11px] tracking-[0.3em] text-white/50 sm:flex lg:right-14">
+        <div className="absolute bottom-10 left-6 z-[2] hidden flex-col items-center gap-3.5 font-label text-[11px] tracking-[0.3em] text-white/50 sm:flex lg:left-14">
           <span>SCROLL</span>
           <div className="relative h-14 w-px overflow-hidden bg-white/20">
             <div className="absolute top-[-20px] left-0 h-5 w-full bg-brand [animation:scrollCue_1.8s_ease-in-out_infinite]" />
           </div>
+        </div>
+
+        {/* Heat tag — a signature nod to a mill certification tag, carrying real proof points */}
+        <div
+          className="absolute right-6 bottom-8 z-[3] hidden w-[236px] rotate-[-3deg] bg-cream p-5 pl-7 text-ink shadow-[0_18px_34px_rgba(0,0,0,0.35)] sm:block lg:right-14"
+        >
+          <span className="absolute top-1/2 left-3 h-[11px] w-[11px] -translate-y-1/2 rounded-full border-2 border-ink bg-cream" />
+          {[
+            ["Heat no.", "2026-014"],
+            ["Grade", "Verified results"],
+            ["Reviews", "14 → 80+ / 90 days"],
+            ["Pipeline", "2× in 6 months"],
+          ].map(([k, v], i, arr) => (
+            <div
+              key={k}
+              className={`flex items-baseline justify-between gap-3 py-1.5 font-mono-tag text-[11.5px] ${
+                i !== arr.length - 1 ? "border-b border-ink/12" : ""
+              }`}
+            >
+              <span className="text-ink/55">{k}</span>
+              <span className="text-right font-medium">{v}</span>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -303,7 +326,7 @@ export default function Home() {
                       {point.title}
                     </h3>
                     <p
-                      className={`text-[14.5px] leading-relaxed ${
+                      className={`font-body text-[14.5px] leading-relaxed ${
                         point.dark ? "text-cream/60" : "text-ink/60"
                       }`}
                     >
@@ -334,7 +357,7 @@ export default function Home() {
                     {item.label}
                   </p>
                   <h3 className="mt-3 text-lg font-bold">{item.title}</h3>
-                  <p className="mt-2.5 text-sm leading-relaxed text-white/65">
+                  <p className="mt-2.5 font-body text-sm leading-relaxed text-white/65">
                     {item.description}
                   </p>
                 </div>
@@ -366,7 +389,7 @@ export default function Home() {
                 How we doubled qualified leads for a 30-year-old Oklahoma
                 metals manufacturer.
               </h2>
-              <p className="mt-2 max-w-2xl text-sm leading-relaxed text-steel-light">
+              <p className="mt-2 max-w-2xl font-body text-sm leading-relaxed text-steel-light">
                 New website, call tracking, a CRM that stopped losing quotes,
                 and a trade show program that actually paid back — rebuilt
                 as one system, not six disconnected projects.
@@ -392,7 +415,7 @@ export default function Home() {
             <h2 className="mt-3 text-4xl font-extrabold tracking-tight text-cream sm:text-5xl">
               Clients love Heartland.
             </h2>
-            <p className="mt-6 max-w-md text-[16.5px] leading-relaxed text-white/60">
+            <p className="mt-6 max-w-md font-body text-[16.5px] leading-relaxed text-white/60">
               Real feedback from metal fabricators and material suppliers
               we&apos;ve worked with.
             </p>
@@ -441,12 +464,14 @@ export default function Home() {
                   className="border border-white/14 bg-white/[0.02] p-7"
                 >
                   <figcaption className="mb-4 flex items-center gap-3.5">
-                    <span className="flex h-[38px] w-[38px] shrink-0 items-center justify-center border border-brand font-label text-xs font-semibold text-brand">
+                    <span className="flex h-[38px] w-[38px] shrink-0 items-center justify-center border border-brand font-mono-tag text-xs font-medium text-brand">
                       {t.initials}
                     </span>
-                    <span className="text-[15px] font-bold text-cream">{t.name}</span>
+                    <span className="font-mono-tag text-[13px] font-medium text-cream">
+                      {t.name}
+                    </span>
                   </figcaption>
-                  <blockquote className="text-[15px] leading-relaxed text-white/66">
+                  <blockquote className="font-body text-[15px] leading-relaxed text-white/66">
                     &ldquo;{t.quote}&rdquo;
                   </blockquote>
                 </figure>
@@ -484,7 +509,9 @@ export default function Home() {
                     />
                   </svg>
                 </summary>
-                <p className="mt-3 text-sm leading-relaxed text-steel-light">{faq.answer}</p>
+                <p className="mt-3 font-body text-sm leading-relaxed text-steel-light">
+                  {faq.answer}
+                </p>
               </details>
             ))}
           </div>
@@ -497,7 +524,7 @@ export default function Home() {
           <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
             Get a free audit + 30-minute call.
           </h2>
-          <p className="mx-auto mt-3 max-w-xl text-white/70">
+          <p className="mx-auto mt-3 max-w-xl font-body text-white/70">
             Tell us about your operation. We&apos;ll do a quick teardown of
             your current marketing presence and walk you through what
             we&apos;d fix first on the call.

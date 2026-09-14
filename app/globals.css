@@ -4,12 +4,12 @@
 :root {
   --background: #ffffff;
   --foreground: #1c1c1c;
-  --brand: #dd4a31;
-  --brand-dark: #b83a25;
-  --steel: #0c0d0f;
+  --brand: #d93013;
+  --brand-dark: #a82510;
+  --steel: #15151a;
   --steel-light: #4a5568;
   --cream: #f4f2ee;
-  --ink: #14161a;
+  --ink: #15151a;
 }
 
 @theme inline {
@@ -23,6 +23,8 @@
   --color-ink: var(--ink);
   --font-sans: var(--font-archivo);
   --font-label: var(--font-oswald);
+  --font-body: var(--font-inter);
+  --font-mono-tag: var(--font-plex-mono);
 }
 
 body {

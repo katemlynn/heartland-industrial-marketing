@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Heartland Industrial Marketing — direction</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;900&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root{
+    --graphite:#1C1E22;
+    --mill:#F2F1ED;
+    --red:#D93013;
+    --steel:#9a9ca1;
+    --ink:#15151A;
+    --line-dark: rgba(242,241,237,0.14);
+    --line-light: rgba(21,21,26,0.12);
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    font-family:'Inter',sans-serif;
+    background:var(--mill);
+    color:var(--ink);
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;}
+  button{font-family:inherit;cursor:pointer;}
+  :focus-visible{outline:2px solid var(--red); outline-offset:2px;}
+
+  .nav{
+    max-width:1120px;
+    margin:0 auto;
+    padding:28px 24px 0;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+  }
+  .wordmark{display:flex; align-items:center; gap:10px;}
+  .wordmark .bar{width:9px; height:20px; background:var(--red); flex:none;}
+  .wordmark span{font-family:'Archivo',sans-serif; font-weight:900; font-size:19px; letter-spacing:-0.01em;}
+  .nav-links{display:flex; align-items:center; gap:28px; font-size:14px;}
+  .nav-links a{text-decoration:none; color:var(--ink); opacity:0.72; transition:opacity .15s ease;}
+  .nav-links a:hover{opacity:1;}
+  .nav-links .cta-link{opacity:1; border-bottom:1px solid var(--ink); padding-bottom:1px;}
+
+  .hero{
+    background:var(--graphite);
+    color:var(--mill);
+    margin-top:24px;
+    position:relative;
+    overflow:hidden;
+    border-radius:2px;
+  }
+  .hero::before{
+    content:"";
+    position:absolute; inset:0;
+    background:repeating-linear-gradient(115deg, rgba(242,241,237,0.05) 0px, rgba(242,241,237,0.05) 1px, transparent 1px, transparent 34px);
+    pointer-events:none;
+  }
+  .hero-inner{
+    max-width:1120px;
+    margin:0 auto;
+    padding:96px 24px 120px;
+    position:relative;
+  }
+  .hero-headline{
+    font-family:'Archivo',sans-serif;
+    font-weight:900;
+    font-size:clamp(38px, 6.4vw, 78px);
+    line-height:1.02;
+    letter-spacing:-0.02em;
+    max-width:680px;
+    margin:0 0 28px;
+  }
+  .hero-sub{
+    font-size:17px;
+    line-height:1.6;
+    color:var(--steel);
+    max-width:440px;
+    margin:0 0 40px;
+  }
+  .cta-row{display:flex; gap:14px; flex-wrap:wrap;}
+  .btn-primary{
+    background:var(--red);
+    color:var(--mill);
+    border:none;
+    padding:14px 26px;
+    font-size:15px;
+    font-weight:500;
+    border-radius:2px;
+    transition:filter .15s ease;
+  }
+  .btn-primary:hover{filter:brightness(1.1);}
+  .btn-ghost{
+    background:transparent;
+    color:var(--mill);
+    border:1px solid rgba(242,241,237,0.3);
+    padding:14px 26px;
+    font-size:15px;
+    font-weight:500;
+    border-radius:2px;
+    transition:border-color .15s ease;
+  }
+  .btn-ghost:hover{border-color:rgba(242,241,237,0.7);}
+
+  /* mill tag — the one signature moment */
+  .tag{
+    position:absolute;
+    right:24px;
+    bottom:-34px;
+    width:236px;
+    background:var(--mill);
+    color:var(--ink);
+    border-radius:3px;
+    padding:18px 20px 20px 30px;
+    transform:rotate(-3deg);
+    box-shadow:0 18px 34px rgba(0,0,0,0.28);
+    animation:stamp-in .5s cubic-bezier(.2,.9,.3,1.2) both;
+    animation-delay:.15s;
+  }
+  .tag::before{
+    content:"";
+    position:absolute;
+    left:12px; top:50%;
+    width:11px; height:11px;
+    margin-top:-5.5px;
+    border-radius:50%;
+    background:var(--mill);
+    border:2px solid var(--ink);
+    box-shadow: inset 0 0 0 2px var(--mill), 0 0 0 999px var(--mill);
+    clip-path:none;
+  }
+  .tag-row{
+    display:flex;
+    justify-content:space-between;
+    gap:10px;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11.5px;
+    padding:6px 0;
+    border-bottom:1px solid var(--line-light);
+  }
+  .tag-row:last-child{border-bottom:none;}
+  .tag-row .k{color:var(--ink); opacity:0.55;}
+  .tag-row .v{font-weight:500; text-align:right;}
+  @keyframes stamp-in{
+    0%{opacity:0; transform:rotate(-3deg) scale(1.22) translateY(-6px);}
+    60%{opacity:1;}
+    100%{opacity:1; transform:rotate(-3deg) scale(1) translateY(0);}
+  }
+  @media (prefers-reduced-motion: reduce){
+    .tag{animation:none;}
+  }
+
+  .findings{
+    max-width:1120px;
+    margin:0 auto;
+    padding:100px 24px 120px;
+  }
+  .findings h2{
+    font-family:'Archivo',sans-serif;
+    font-weight:700;
+    font-size:clamp(24px, 3vw, 32px);
+    margin:0 0 48px;
+    max-width:520px;
+  }
+  .finding{
+    max-width:640px;
+    padding:32px 0;
+    border-top:1px solid var(--line-light);
+  }
+  .finding:last-child{border-bottom:1px solid var(--line-light);}
+  .finding p{
+    margin:0;
+    font-size:19px;
+    line-height:1.65;
+  }
+  .finding p .lead{font-weight:600;}
+
+  @media (max-width:640px){
+    .hero-inner{padding:64px 20px 140px;}
+    .tag{right:20px; bottom:-46px; width:200px;}
+  }
+
+  /* comparison */
+  .compare{
+    max-width:1120px;
+    margin:0 auto;
+    padding:0 24px 120px;
+  }
+  .compare-row{
+    display:grid;
+    grid-template-columns:200px 1fr;
+    gap:24px;
+    padding:28px 0;
+    border-top:1px solid var(--line-light);
+  }
+  .compare-row:last-child{border-bottom:1px solid var(--line-light);}
+  .compare-row .vs{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:13px;
+    opacity:0.55;
+    padding-top:4px;
+  }
+  .compare-row h3{
+    font-family:'Archivo',sans-serif;
+    font-weight:700;
+    font-size:20px;
+    margin:0 0 8px;
+  }
+  .compare-row p{
+    margin:0;
+    font-size:16px;
+    line-height:1.6;
+    opacity:0.82;
+    max-width:520px;
+  }
+  @media (max-width:640px){ .compare-row{grid-template-columns:1fr;} }
+
+  /* testimonials */
+  .testimonials{
+    background:var(--graphite);
+    color:var(--mill);
+    padding:100px 24px 110px;
+  }
+  .testimonials-inner{
+    max-width:1120px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:1.3fr 1fr;
+    gap:64px;
+  }
+  .featured-quote p{
+    font-family:'Archivo',sans-serif;
+    font-weight:500;
+    font-size:clamp(22px,2.6vw,30px);
+    line-height:1.35;
+    margin:0 0 24px;
+  }
+  .featured-quote cite{
+    font-style:normal;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:13px;
+    color:var(--steel);
+  }
+  .quote-list .q{
+    padding:20px 0;
+    border-top:1px solid var(--line-dark);
+  }
+  .quote-list .q:last-child{padding-bottom:0;}
+  .quote-list p{
+    margin:0 0 10px;
+    font-size:15px;
+    line-height:1.6;
+    opacity:0.88;
+  }
+  .quote-list cite{
+    font-style:normal;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;
+    color:var(--steel);
+  }
+  @media (max-width:780px){ .testimonials-inner{grid-template-columns:1fr; gap:40px;} }
+
+  /* faq */
+  .faq{
+    max-width:760px;
+    margin:0 auto;
+    padding:100px 24px 120px;
+  }
+  .faq details{
+    border-top:1px solid var(--line-light);
+    padding:22px 0;
+  }
+  .faq details:last-child{border-bottom:1px solid var(--line-light);}
+  .faq summary{
+    cursor:pointer;
+    list-style:none;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:16px;
+    font-family:'Archivo',sans-serif;
+    font-weight:600;
+    font-size:17px;
+  }
+  .faq summary::-webkit-details-marker{display:none;}
+  .faq summary .plus{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:20px;
+    font-weight:400;
+    transition:transform .2s ease;
+    flex:none;
+  }
+  .faq details[open] summary .plus{transform:rotate(45deg);}
+  .faq .answer{
+    margin:16px 0 0;
+    font-size:15.5px;
+    line-height:1.65;
+    opacity:0.82;
+    max-width:640px;
+  }
+
+  /* audit form */
+  .audit{
+    background:var(--graphite);
+    color:var(--mill);
+    padding:100px 24px 110px;
+  }
+  .audit-inner{
+    max-width:1120px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:64px;
+  }
+  .audit h2{
+    font-family:'Archivo',sans-serif;
+    font-weight:900;
+    font-size:clamp(28px,4vw,42px);
+    line-height:1.08;
+    margin:0 0 20px;
+    max-width:420px;
+  }
+  .audit-points{list-style:none; margin:0; padding:0;}
+  .audit-points li{
+    font-size:14.5px;
+    color:var(--steel);
+    padding:10px 0;
+    border-top:1px solid var(--line-dark);
+  }
+  .audit-points li:last-child{border-bottom:1px solid var(--line-dark);}
+  .audit-form{display:flex; flex-direction:column; gap:14px;}
+  .audit-form input, .audit-form select{
+    background:transparent;
+    border:none;
+    border-bottom:1px solid rgba(242,241,237,0.3);
+    color:var(--mill);
+    font-family:'Inter',sans-serif;
+    font-size:15px;
+    padding:12px 2px;
+    border-radius:0;
+  }
+  .audit-form input::placeholder{color:var(--steel);}
+  .audit-form input:focus, .audit-form select:focus{border-bottom-color:var(--red);}
+  .audit-form select{color:var(--steel);}
+  .audit-form select:valid{color:var(--mill);}
+
+  /* footer */
+  .site-footer{
+    max-width:1120px;
+    margin:0 auto;
+    padding:56px 24px 60px;
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    flex-wrap:wrap;
+    gap:24px;
+    font-size:13px;
+    opacity:0.7;
+  }
+  .site-footer .foot-links{display:flex; gap:20px;}
+  .site-footer a{text-decoration:none; color:inherit;}
+</style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="wordmark"><div class="bar"></div><span>HEARTLAND</span></div>
+    <div class="nav-links">
+      <a href="#">Services</a>
+      <a href="#">Blog</a>
+      <a href="#">FAQ</a>
+      <a href="#" class="cta-link">Free audit</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-headline">Stop losing sales to competitors who market better.</div>
+      <p class="hero-sub">We help metals and manufacturing companies get found, look credible, and win the jobs they're losing today.</p>
+      <div class="cta-row">
+        <button class="btn-primary">Get a free audit</button>
+        <button class="btn-ghost">See what we do</button>
+      </div>
+
+      <div class="tag">
+        <div class="tag-row"><span class="k">Heat no.</span><span class="v">2026-014</span></div>
+        <div class="tag-row"><span class="k">Grade</span><span class="v">Verified results</span></div>
+        <div class="tag-row"><span class="k">Reviews</span><span class="v">14 → 80+ / 90 days</span></div>
+        <div class="tag-row"><span class="k">Pipeline</span><span class="v">2x in 6 months</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="findings">
+    <h2>Sound familiar?</h2>
+
+    <div class="finding">
+      <p><span class="lead">Your ads aren't paying back.</span> Money's going into Google Ads with nothing to show for it. You can't tell what's working, and the agency running it can't either.</p>
+    </div>
+    <div class="finding">
+      <p><span class="lead">You're invisible to the people searching.</span> The competitor across town has 240 reviews. You have 11. The quotes are reaching them, not you.</p>
+    </div>
+    <div class="finding">
+      <p><span class="lead">You sell the materials. Someone else gets the credit.</span> Your panels end up on a building you'll never visit, installed by a GC you didn't meet. The end owner never learns your name.</p>
+    </div>
+  </section>
+
+  <section class="compare">
+    <h2>Why we're a better bet than the alternatives.</h2>
+
+    <div class="compare-row">
+      <div class="vs">vs. a generalist agency</div>
+      <div>
+        <h3>They don't speak metals.</h3>
+        <p>We do. Built for one industry, so we already know what moves the needle for a metals manufacturer or material supplier — not a generic playbook borrowed from retail or SaaS.</p>
+      </div>
+    </div>
+
+    <div class="compare-row">
+      <div class="vs">vs. one in-house hire</div>
+      <div>
+        <h3>One person can't be six specialists.</h3>
+        <p>You get a full team — strategist, designer, ad buyer, SEO, copy — for less than the cost of one full-time marketing hire.</p>
+      </div>
+    </div>
+
+    <div class="compare-row">
+      <div class="vs">vs. the cheap freelancer</div>
+      <div>
+        <h3>$500 a month buys $500 a month of effort.</h3>
+        <p>Senior marketers, month-to-month. If we're not earning our keep, you walk — no long contract keeping either of us stuck.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <div class="testimonials-inner">
+      <div class="featured-quote">
+        <p>"We tried two agencies before this one. Both took my money and had nothing to show for it after months. Heartland got our Google profile from 14 reviews to 80+ in 90 days, and the quote requests followed."</p>
+        <cite>Wade C.</cite>
+      </div>
+      <div class="quote-list">
+        <div class="q">
+          <p>"Six weeks — that's how long my old agency took to do anything. Heartland had our paid search program live in two. I don't have to babysit them."</p>
+          <cite>Jeremy P.</cite>
+        </div>
+        <div class="q">
+          <p>"Heartland got it from minute one: we sell the materials, GCs do the install, end customers never know our name. They built the marketing for that reality."</p>
+          <cite>Karen D.</cite>
+        </div>
+        <div class="q">
+          <p>"We were paying a website guy, an SEO guy, and a print agency separately, and none of them talked to each other. One team now, and our quote pipeline doubled in six months."</p>
+          <cite>Tom B.</cite>
+        </div>
+        <div class="q">
+          <p>"Our logo was from the '90s and our site looked it. Heartland refreshed everything — site, truck wraps, even our FABTECH booth. Closed three accounts off that one event."</p>
+          <cite>Mike H.</cite>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq">
+    <h2>Frequently asked questions</h2>
+
+    <details>
+      <summary>What's the best marketing strategy for a metals company? <span class="plus">+</span></summary>
+      <p class="answer">It depends on what you sell, who you sell to, and the jobs you want to win more of. For most metals manufacturers, it starts with a clearly defined ideal customer and a website built to convert them — then a Google Business Profile, paid search, signage, and a steady review pipeline.</p>
+    </details>
+    <details>
+      <summary>How long does it take to start generating leads? <span class="plus">+</span></summary>
+      <p class="answer">Paid search and a tightened Google Business Profile can produce inbound quote requests within a few weeks. SEO and reputation-building compound over three to six months. We sequence the fast wins first so you have momentum while the slower channels build.</p>
+    </details>
+    <details>
+      <summary>Should I invest in SEO or paid ads first? <span class="plus">+</span></summary>
+      <p class="answer">Both, in that order, but start paid first. Paid search puts you in front of buyers looking today. SEO takes three to six months to compound but is the cheapest long-term channel — under-investing in either usually costs more in the end.</p>
+    </details>
+    <details>
+      <summary>How much should a metals company spend on marketing? <span class="plus">+</span></summary>
+      <p class="answer">Most owner-operated metals manufacturers should spend three to seven percent of revenue on marketing — lower with strong word of mouth, higher when growing into new geographies or product lines. We'll tell you what makes sense for your situation on the call.</p>
+    </details>
+    <details>
+      <summary>Most of my sales go through contractors — how do I market around that? <span class="plus">+</span></summary>
+      <p class="answer">One of the most common patterns we see: you sell the materials, GCs install, end owners never learn your name. We use post-install review systems, on-site QR codes routing back to you, and contractor partnership programs that share credit.</p>
+    </details>
+  </section>
+
+  <section class="audit">
+    <div class="audit-inner">
+      <div>
+        <h2>Get a free audit and a 30-minute call.</h2>
+        <ul class="audit-points">
+          <li>Direct call with a founder, not a salesperson</li>
+          <li>The audit happens before the call, so we bring something concrete</li>
+          <li>If we're not a fit, we'll tell you on the call</li>
+        </ul>
+      </div>
+      <form class="audit-form">
+        <input type="text" placeholder="Full name" required>
+        <input type="email" placeholder="Email" required>
+        <input type="tel" placeholder="Phone number" required>
+        <select required>
+          <option value="" disabled selected>How big is your operation right now?</option>
+          <option>Under $1M revenue</option>
+          <option>$1M to $5M</option>
+          <option>$5M to $20M</option>
+          <option>$20M+</option>
+        </select>
+        <button type="submit" class="btn-primary" style="margin-top:8px; width:fit-content;">Get my free audit</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="wordmark"><div class="bar" style="width:7px;height:16px;"></div><span style="font-size:15px;">HEARTLAND</span></div>
+    <div class="foot-links">
+      <a href="#">Services</a>
+      <a href="#">Blog</a>
+      <a href="#">LinkedIn</a>
+    </div>
+    <div>© 2026 Heartland Industrial Marketing</div>
+  </footer>
+
+</body>
+</html>
