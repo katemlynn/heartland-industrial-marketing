@@ -491,11 +491,8 @@ export default function Home() {
       {/* ---------- FAQ ---------- */}
       <section className="border-t border-black/10 bg-tan">
         <div className="mx-auto max-w-3xl px-6 py-24 lg:px-14">
-          <p className="font-label text-[13px] font-semibold tracking-[0.32em] text-brand uppercase">
-            FAQ
-          </p>
-          <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-ink sm:text-4xl">
-            Questions we hear from metals owners every week.
+          <h2 className="text-3xl font-extrabold tracking-tight text-ink sm:text-4xl">
+            Frequently Asked Questions
           </h2>
           <div className="mt-9 divide-y divide-black/12 border-t border-black/12">
             {FAQS.map((faq) => (

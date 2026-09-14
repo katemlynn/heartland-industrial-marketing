@@ -6,10 +6,16 @@ export default function Footer() {
 
   return (
     <footer className="bg-steel px-6 pt-16 pb-10 lg:px-14">
-      <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-6 border-b border-white/8 pb-10">
-        <p className="font-body text-[15px] font-medium text-white">
-          Marketing built for metals and manufacturing companies.
-        </p>
+      <div className="mx-auto flex max-w-6xl items-center border-b border-white/8 pb-10">
+        <Image
+          src="/heartland-logo-white.png"
+          alt="Heartland Industrial Marketing"
+          width={563}
+          height={115}
+          className="h-7 w-auto opacity-80"
+        />
+      </div>
+      <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 pt-7">
         <nav className="flex flex-wrap gap-8 font-label text-xs font-medium tracking-[0.12em] text-white/55 uppercase">
           <Link href="/services" className="transition-colors hover:text-white">
             Services
@@ -30,21 +36,12 @@ export default function Footer() {
             Contact
           </Link>
         </nav>
-      </div>
-      <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 pt-7">
-        <div className="flex flex-wrap items-center gap-x-5 gap-y-1 font-body text-[13px] text-white/40">
+        <div className="flex flex-wrap items-center gap-x-5 gap-y-1 font-body text-xs text-white/40">
           <p>&copy; {year} Heartland Industrial Marketing. All rights reserved.</p>
           <Link href="/privacy" className="transition-colors hover:text-white/70">
             Privacy Policy
           </Link>
         </div>
-        <Image
-          src="/heartland-logo-white.png"
-          alt="Heartland Industrial Marketing"
-          width={563}
-          height={115}
-          className="h-[22px] w-auto opacity-70"
-        />
       </div>
     </footer>
   );
