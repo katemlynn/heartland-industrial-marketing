@@ -226,14 +226,22 @@ export default function Home() {
       </section>
 
       {/* ---------- SERVICE TICKER ---------- */}
-      <section className="border-b border-black/10 bg-cream py-10">
-        <div className="mx-auto max-w-6xl px-6">
-          <p className="text-center font-label text-xs font-medium tracking-[0.24em] text-steel-light uppercase">
-            Full Service Marketing
-          </p>
-          <div className="mt-5 flex flex-wrap justify-center gap-x-8 gap-y-3">
-            {SERVICES.map((service) => (
-              <span key={service} className="text-sm font-medium text-steel-light">
+      <section className="border-y border-white/10 bg-ink py-4">
+        <div
+          className="relative overflow-hidden"
+          style={{
+            maskImage:
+              "linear-gradient(to right, transparent, #000 6%, #000 94%, transparent)",
+            WebkitMaskImage:
+              "linear-gradient(to right, transparent, #000 6%, #000 94%, transparent)",
+          }}
+        >
+          <div className="flex w-max [animation:marqueeScrollX_60s_linear_infinite] hover:[animation-play-state:paused]">
+            {[...SERVICES, ...SERVICES].map((service, i) => (
+              <span
+                key={`${service}-${i}`}
+                className="shrink-0 px-8 font-label text-xs font-medium tracking-[0.18em] whitespace-nowrap text-white/55 uppercase"
+              >
                 {service}
               </span>
             ))}
@@ -242,7 +250,7 @@ export default function Home() {
       </section>
 
       {/* ---------- PAIN POINTS ---------- */}
-      <section className="bg-cream px-6 py-24 lg:px-14">
+      <section className="bg-tan px-6 py-24 lg:px-14">
         <p className="mx-auto max-w-6xl font-label text-[13px] font-semibold tracking-[0.32em] text-brand uppercase">
           &mdash; Sound Familiar?
         </p>
@@ -315,7 +323,7 @@ export default function Home() {
       </section>
 
       {/* ---------- CASE STUDY TEASER ---------- */}
-      <section className="border-t border-black/10 bg-cream">
+      <section className="border-t border-black/10 bg-tan">
         <div className="mx-auto max-w-6xl px-6 py-24 lg:px-14">
           <p className="font-label text-[13px] font-semibold tracking-[0.32em] text-brand uppercase">
             &mdash; Case Study
@@ -353,14 +361,21 @@ export default function Home() {
         <div className="mx-auto max-w-6xl">
           {/* Spotlight */}
           <div className="grid gap-10 border-b border-white/12 pb-16 lg:grid-cols-2 lg:items-center">
-            <div className="relative h-[280px] overflow-hidden lg:h-[380px]">
+            <div className="relative h-[280px] overflow-hidden border border-white/10 lg:h-[380px]">
               <Image
                 src="/testimonial-welder.jpg"
                 alt="A welder fabricating a steel beam at a Heartland client's shop"
                 fill
                 sizes="(min-width: 1024px) 50vw, 100vw"
                 className="object-cover"
-                style={{ objectPosition: "center 40%" }}
+                style={{ objectPosition: "center 35%" }}
+              />
+              <div
+                className="absolute inset-0"
+                style={{
+                  background:
+                    "linear-gradient(180deg, rgba(21,21,26,0.05) 0%, rgba(21,21,26,0) 35%, rgba(21,21,26,0.35) 100%)",
+                }}
               />
             </div>
             <div>
@@ -371,8 +386,8 @@ export default function Home() {
                 &ldquo;We tried two agencies before this one. Both took my
                 money and had nothing to show for it after months.{" "}
                 <strong className="font-semibold text-cream">
-                  Heartland got our Google profile from 14 reviews to 80+ in
-                  90 days
+                  Heartland got our Google profile from 35 reviews to 80+ in
+                  4 months
                 </strong>
                 , and the quote requests followed. Best money we&apos;ve ever
                 spent on marketing.&rdquo;
@@ -383,7 +398,7 @@ export default function Home() {
                 </span>
                 <span className="h-1 w-1 rounded-full bg-white/30" />
                 <span className="font-body text-sm text-white/50">
-                  14 &rarr; 80+ Google reviews in 90 days
+                  35 &rarr; 80+ Google reviews in 4 months
                 </span>
               </div>
             </div>
@@ -465,7 +480,7 @@ export default function Home() {
       </section>
 
       {/* ---------- FAQ ---------- */}
-      <section className="border-t border-black/10 bg-cream">
+      <section className="border-t border-black/10 bg-tan">
         <div className="mx-auto max-w-3xl px-6 py-24 lg:px-14">
           <p className="font-label text-[13px] font-semibold tracking-[0.32em] text-brand uppercase">
             &mdash; FAQ
@@ -473,9 +488,12 @@ export default function Home() {
           <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-ink sm:text-4xl">
             Frequently Asked Questions
           </h2>
-          <div className="mt-9 divide-y divide-black/12 border border-black/12 bg-white">
+          <div className="mt-9 divide-y divide-black/12 border-t border-black/12">
             {FAQS.map((faq) => (
-              <details key={faq.question} className="group p-7">
+              <details
+                key={faq.question}
+                className="group p-7 transition-colors hover:bg-black/[0.025]"
+              >
                 <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-bold text-ink">
                   {faq.question}
                   <svg
@@ -505,7 +523,7 @@ export default function Home() {
       <section className="bg-steel text-white">
         <div className="mx-auto max-w-6xl px-6 py-20 text-center lg:px-14">
           <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
-            Get a free audit + 30-minute call.
+            Get a free audit
           </h2>
           <p className="mx-auto mt-3 max-w-xl font-body text-white/70">
             Tell us about your operation. We&apos;ll do a quick teardown of

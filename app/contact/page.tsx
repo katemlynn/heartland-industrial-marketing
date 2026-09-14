@@ -12,7 +12,7 @@ export default function ContactPage() {
     <div className="bg-steel">
       <PageHeader
         eyebrow="Free Audit"
-        title="Get a free audit + 30-minute call."
+        title="Get a free audit"
         description="Tell us about your operation. We'll do a quick teardown of your current marketing presence and walk you through what we'd fix first on the call."
       />
 

@@ -9,6 +9,7 @@
   --steel: #15151a;
   --steel-light: #4a5568;
   --cream: #f4f2ee;
+  --tan: #eee6d6;
   --ink: #15151a;
 }
 
@@ -20,6 +21,7 @@
   --color-steel: var(--steel);
   --color-steel-light: var(--steel-light);
   --color-cream: var(--cream);
+  --color-tan: var(--tan);
   --color-ink: var(--ink);
   --font-sans: var(--font-archivo);
   --font-label: var(--font-oswald);
@@ -71,6 +73,15 @@ body {
   }
   to {
     transform: translateY(-50%);
+  }
+}
+
+@keyframes marqueeScrollX {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
   }
 }
 
