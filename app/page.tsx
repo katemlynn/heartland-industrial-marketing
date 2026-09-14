@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
+import CountUp from "@/components/CountUp";
 
 const SERVICES = [
   "Full Service Marketing",
@@ -260,9 +261,9 @@ export default function Home() {
         <div className="mx-auto mt-12 max-w-6xl divide-y divide-black/12 border-t border-black/12">
           {PAIN_POINTS.map((point, index) => (
             <Reveal key={point.title} delay={index * 90}>
-              <div className="flex flex-col gap-4 py-10 sm:grid sm:grid-cols-[64px_1fr] sm:gap-8">
+              <div className="group flex flex-col gap-4 px-4 py-10 -mx-4 transition-colors hover:bg-black/[0.02] sm:grid sm:grid-cols-[64px_1fr] sm:gap-8">
                 <div className="flex items-center gap-4 sm:flex-col sm:items-start sm:gap-3">
-                  <span className="font-label text-sm font-semibold text-ink/30">
+                  <span className="font-label text-sm font-semibold text-ink/30 transition-colors group-hover:text-brand">
                     {String(index + 1).padStart(2, "0")}
                   </span>
                   <svg viewBox="0 0 24 24" fill="none" className="h-7 w-7 text-brand">
@@ -298,8 +299,8 @@ export default function Home() {
           <div className="mt-12 divide-y divide-white/12 border-t border-white/12">
             {COMPARISONS.map((item, index) => (
               <Reveal key={item.label} delay={index * 90}>
-                <div className="flex flex-col gap-2 py-8 sm:grid sm:grid-cols-[64px_1fr] sm:gap-8">
-                  <span className="font-label text-sm font-semibold text-white/25">
+                <div className="group flex flex-col gap-2 px-4 py-8 -mx-4 transition-colors hover:bg-white/[0.03] sm:grid sm:grid-cols-[64px_1fr] sm:gap-8">
+                  <span className="font-label text-sm font-semibold text-white/25 transition-colors group-hover:text-brand">
                     {String(index + 1).padStart(2, "0")}
                   </span>
                   <div>
@@ -335,11 +336,11 @@ export default function Home() {
             <div className="shrink-0">
               <div className="flex items-baseline gap-2.5">
                 <span className="text-3xl font-bold tracking-tight text-ink/35 lg:text-4xl">
-                  30
+                  <CountUp end={30} />
                 </span>
                 <span className="text-2xl font-light text-ink/30">&rarr;</span>
                 <span className="text-5xl font-black tracking-tight text-brand lg:text-6xl">
-                  75
+                  <CountUp end={75} />
                 </span>
               </div>
               <p className="mt-2 font-body text-sm text-steel-light">
@@ -408,7 +409,8 @@ export default function Home() {
                 </span>
                 <span className="h-1 w-1 rounded-full bg-white/30" />
                 <span className="font-body text-sm text-white/50">
-                  35 &rarr; 80+ Google reviews in 4 months
+                  <CountUp end={35} /> &rarr; <CountUp end={80} suffix="+" />{" "}
+                  Google reviews in 4 months
                 </span>
               </div>
             </div>
@@ -429,13 +431,17 @@ export default function Home() {
 
             <div className="mt-12 flex gap-4">
               <div className="flex-1 border border-white/16 px-7 py-6">
-                <div className="text-[34px] leading-none font-black text-brand">25+</div>
+                <div className="text-[34px] leading-none font-black text-brand">
+                  <CountUp end={25} suffix="+" />
+                </div>
                 <div className="mt-2.5 font-label text-[11.5px] tracking-[0.1em] text-white/55 uppercase">
                   Projects Delivered
                 </div>
               </div>
               <div className="flex-1 border border-white/16 px-7 py-6">
-                <div className="text-[34px] leading-none font-black text-brand">100%</div>
+                <div className="text-[34px] leading-none font-black text-brand">
+                  <CountUp end={100} suffix="%" />
+                </div>
                 <div className="mt-2.5 font-label text-[11.5px] tracking-[0.1em] text-white/55 uppercase">
                   Client Satisfaction
                 </div>
