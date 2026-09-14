@@ -57,7 +57,7 @@ export default function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-5">
+    <form onSubmit={handleSubmit} className="space-y-6">
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
           <label htmlFor="name" className="mb-1.5 block font-body text-sm font-medium text-cream">
@@ -82,7 +82,7 @@ export default function ContactForm() {
         </div>
         <div>
           <label htmlFor="revenue" className="mb-1.5 block font-body text-sm font-medium text-cream">
-            How big is your operation right now?
+            Revenue range
           </label>
           <select id="revenue" name="revenue" defaultValue="" className="field">
             <option value="" disabled>
@@ -108,7 +108,11 @@ export default function ContactForm() {
         <p className="font-body text-sm text-red-400">{errorMessage}</p>
       )}
 
-      <button type="submit" disabled={status === "submitting"} className="btn btn-solid disabled:opacity-60">
+      <button
+        type="submit"
+        disabled={status === "submitting"}
+        className="btn btn-solid w-full justify-center disabled:opacity-60"
+      >
         <span>{status === "submitting" ? "Sending..." : "Get My Free Audit"}</span>
       </button>
     </form>

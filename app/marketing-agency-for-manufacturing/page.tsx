@@ -62,7 +62,7 @@ export default function ManufacturingPage() {
         />
         <div className="relative z-[2] mx-auto max-w-6xl">
           <p className="font-label text-[13px] font-semibold tracking-[0.32em] text-brand uppercase">
-            &mdash; Marketing for Manufacturers &amp; Metals Companies
+            For Manufacturing
           </p>
           <h1 className="mt-4 max-w-2xl text-4xl font-extrabold tracking-tight text-cream sm:text-5xl">
             Marketing Agency for Manufacturing &amp; Metals Companies
@@ -89,7 +89,7 @@ export default function ManufacturingPage() {
       <section className="border-t border-white/8 px-6 py-24 lg:px-14">
         <div className="mx-auto max-w-6xl">
           <p className="font-label text-[13px] font-semibold tracking-[0.32em] text-brand uppercase">
-            &mdash; Who We Serve
+            Who We Serve
           </p>
           <h2 className="mt-3 max-w-2xl text-3xl font-extrabold tracking-tight text-cream sm:text-4xl">
             Built for one industry. We already know what moves the needle.

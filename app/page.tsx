@@ -192,7 +192,7 @@ export default function Home() {
         <p
           className="relative z-[2] mb-7 font-label text-[13px] font-semibold tracking-[0.32em] text-brand uppercase [animation:heroRise_0.7s_ease_forwards] [animation-delay:0.1s] opacity-0"
         >
-          &mdash; For Metals &amp; Manufacturing Companies
+          For Metals &amp; Manufacturing Companies
         </p>
         <h1
           className="relative z-[2] max-w-3xl text-[40px] leading-[1.05] font-extrabold tracking-tight text-cream opacity-0 [animation:heroRise_0.8s_ease_forwards] [animation-delay:0.22s] sm:text-6xl lg:text-[76px]"
@@ -253,7 +253,7 @@ export default function Home() {
       {/* ---------- PAIN POINTS ---------- */}
       <section className="bg-tan px-6 py-24 lg:px-14">
         <p className="mx-auto max-w-6xl font-label text-[13px] font-semibold tracking-[0.32em] text-brand uppercase">
-          &mdash; Sound Familiar?
+          Sound Familiar?
         </p>
         <h2 className="mx-auto mt-3 max-w-6xl text-3xl font-extrabold tracking-tight text-ink sm:text-4xl">
           Three patterns we hear from metals owners every week.
@@ -291,7 +291,7 @@ export default function Home() {
       <section className="bg-steel text-white">
         <div className="mx-auto max-w-6xl px-6 py-24 lg:px-14">
           <p className="font-label text-[13px] font-semibold tracking-[0.32em] text-brand uppercase">
-            &mdash; Why Heartland
+            Why Heartland
           </p>
           <h2 className="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">
             Why we&apos;re a better bet than the alternatives.
@@ -412,7 +412,7 @@ export default function Home() {
           <div className="mt-16 grid gap-16 lg:grid-cols-2">
           <div>
             <p className="font-label text-[13px] font-semibold tracking-[0.32em] text-brand uppercase">
-              &mdash; Reviews
+              Reviews
             </p>
             <h2 className="mt-3 text-4xl font-extrabold tracking-tight text-cream sm:text-5xl">
               Clients love Heartland.
@@ -492,10 +492,10 @@ export default function Home() {
       <section className="border-t border-black/10 bg-tan">
         <div className="mx-auto max-w-3xl px-6 py-24 lg:px-14">
           <p className="font-label text-[13px] font-semibold tracking-[0.32em] text-brand uppercase">
-            &mdash; FAQ
+            FAQ
           </p>
           <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-ink sm:text-4xl">
-            Frequently Asked Questions
+            Questions we hear from metals owners every week.
           </h2>
           <div className="mt-9 divide-y divide-black/12 border-t border-black/12">
             {FAQS.map((faq) => (

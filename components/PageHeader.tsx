@@ -19,7 +19,7 @@ export default function PageHeader({
         }}
       />
       <p className="relative z-[2] font-label text-[13px] font-semibold tracking-[0.32em] text-brand uppercase">
-        &mdash; {eyebrow}
+        {eyebrow}
       </p>
       <h1 className="relative z-[2] mt-3 max-w-xl text-4xl font-extrabold tracking-tight text-cream sm:text-5xl">
         {title}

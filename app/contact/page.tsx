@@ -11,28 +11,14 @@ export default function ContactPage() {
   return (
     <div className="bg-steel">
       <PageHeader
-        eyebrow="Free Audit"
+        eyebrow="Contact"
         title="Get a free audit"
         description="Tell us about your operation. We'll do a quick teardown of your current marketing presence and walk you through what we'd fix first on the call."
       />
 
       <div className="mx-auto max-w-2xl px-6 pb-24 lg:px-14">
-        <ul className="mb-10 space-y-2.5 font-body text-sm text-white/62">
-          <li className="flex items-start gap-2.5">
-            <span className="mt-1.5 h-[5px] w-[5px] shrink-0 bg-brand" />
-            Direct call with a senior strategist, not a salesperson
-          </li>
-          <li className="flex items-start gap-2.5">
-            <span className="mt-1.5 h-[5px] w-[5px] shrink-0 bg-brand" />
-            The audit happens before the call, so we have something concrete to show you
-          </li>
-          <li className="flex items-start gap-2.5">
-            <span className="mt-1.5 h-[5px] w-[5px] shrink-0 bg-brand" />
-            If we&apos;re not a fit, we&apos;ll tell you on the call
-          </li>
-        </ul>
-
-        <div className="border border-white/16 bg-white/[0.02] p-8">
+        <div className="relative border border-white/16 bg-white/[0.03] p-8 sm:p-10">
+          <div className="absolute inset-x-0 top-0 h-[3px] bg-brand" />
           <ContactForm />
         </div>
 
