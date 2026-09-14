@@ -49,7 +49,7 @@ export default function ContactForm() {
     return (
       <div className="border border-brand/30 bg-brand/10 p-6">
         <p className="font-bold text-cream">Thanks for reaching out!</p>
-        <p className="mt-1 text-sm text-white/65">
+        <p className="mt-1 font-body text-sm text-white/65">
           We received your info and will follow up within one business day.
         </p>
       </div>
@@ -60,13 +60,13 @@ export default function ContactForm() {
     <form onSubmit={handleSubmit} className="space-y-5">
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
-          <label htmlFor="name" className="mb-1.5 block text-sm font-medium text-cream">
+          <label htmlFor="name" className="mb-1.5 block font-body text-sm font-medium text-cream">
             Full name
           </label>
           <input id="name" name="name" type="text" required className="field" />
         </div>
         <div>
-          <label htmlFor="email" className="mb-1.5 block text-sm font-medium text-cream">
+          <label htmlFor="email" className="mb-1.5 block font-body text-sm font-medium text-cream">
             Email
           </label>
           <input id="email" name="email" type="email" required className="field" />
@@ -75,13 +75,13 @@ export default function ContactForm() {
 
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
-          <label htmlFor="phone" className="mb-1.5 block text-sm font-medium text-cream">
+          <label htmlFor="phone" className="mb-1.5 block font-body text-sm font-medium text-cream">
             Phone number
           </label>
           <input id="phone" name="phone" type="tel" className="field" />
         </div>
         <div>
-          <label htmlFor="revenue" className="mb-1.5 block text-sm font-medium text-cream">
+          <label htmlFor="revenue" className="mb-1.5 block font-body text-sm font-medium text-cream">
             How big is your operation right now?
           </label>
           <select id="revenue" name="revenue" defaultValue="" className="field">
@@ -98,13 +98,15 @@ export default function ContactForm() {
       </div>
 
       <div>
-        <label htmlFor="message" className="mb-1.5 block text-sm font-medium text-cream">
+        <label htmlFor="message" className="mb-1.5 block font-body text-sm font-medium text-cream">
           Tell us about your operation
         </label>
         <textarea id="message" name="message" rows={5} required className="field" />
       </div>
 
-      {status === "error" && <p className="text-sm text-red-400">{errorMessage}</p>}
+      {status === "error" && (
+        <p className="font-body text-sm text-red-400">{errorMessage}</p>
+      )}
 
       <button type="submit" disabled={status === "submitting"} className="btn btn-solid disabled:opacity-60">
         <span>{status === "submitting" ? "Sending..." : "Get My Free Audit"}</span>

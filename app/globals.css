@@ -141,6 +141,7 @@ body {
   border: 1px solid rgba(244, 242, 238, 0.18);
   color: var(--cream);
   padding: 0.65rem 0.85rem;
+  font-family: var(--font-inter), Arial, Helvetica, sans-serif;
   font-size: 0.875rem;
 }
 .field::placeholder {
