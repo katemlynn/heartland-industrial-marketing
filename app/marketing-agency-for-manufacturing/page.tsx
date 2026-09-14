@@ -27,6 +27,7 @@ const CASE_STUDY_WORK = [
 ];
 
 const CASE_STUDY_STATS = [
+  { value: "+200%", label: "Increase in site traffic year-over-year" },
   { value: "30 → 75", label: "Qualified leads per month — 2.5× growth across nine months" },
   { value: "↑", label: "Average deal size — bigger jobs, not just more of them" },
   { value: "Multiple", label: "New markets entered — geographic expansion without overhead bloat" },
@@ -115,10 +116,10 @@ export default function ManufacturingPage() {
       <section id="case-study" className="border-t border-white/8 px-6 py-24 lg:px-14">
         <div className="mx-auto max-w-3xl">
           <p className="font-label text-[13px] font-semibold tracking-[0.32em] text-brand uppercase">
-            &mdash; Case Study &middot; 18 Months
+            Case Study &middot; 18 Months
           </p>
           <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-cream sm:text-4xl">
-            How we doubled qualified leads for a 30-year-old Oklahoma metals
+            How we tripled site traffic for a 30-year-old Oklahoma metals
             manufacturer.
           </h2>
 
@@ -143,14 +144,14 @@ export default function ManufacturingPage() {
               ))}
             </ul>
             <p>
-              The work compounded. Over the past nine months, qualified
-              leads grew from 30 a month to 75 a month, the average deal
-              size went up, and they expanded into new territory without
-              adding overhead.
+              The work compounded. Site traffic roughly tripled
+              year-over-year, qualified leads grew from 30 a month to 75 a
+              month, the average deal size went up, and they expanded into
+              new territory without adding overhead.
             </p>
           </div>
 
-          <div className="mt-11 grid gap-5 sm:grid-cols-3">
+          <div className="mt-11 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {CASE_STUDY_STATS.map((stat) => (
               <div key={stat.label} className="border border-white/16 bg-white/[0.02] p-6">
                 <p className="text-2xl font-extrabold text-brand">{stat.value}</p>

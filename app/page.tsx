@@ -327,31 +327,25 @@ export default function Home() {
       <section className="border-t border-black/10 bg-tan">
         <div className="mx-auto max-w-6xl px-6 py-24 lg:px-14">
           <p className="font-label text-[13px] font-semibold tracking-[0.32em] text-brand uppercase">
-            &mdash; Case Study
+            Case Study
           </p>
           <Link
             href="/marketing-agency-for-manufacturing#case-study"
             className="group mt-7 flex flex-col gap-8 border border-black/12 p-8 transition-colors hover:border-brand/40 hover:bg-black/[0.02] sm:flex-row sm:items-center lg:p-10"
           >
             <div className="shrink-0">
-              <div className="flex items-baseline gap-2.5">
-                <span className="text-3xl font-bold tracking-tight text-ink/35 lg:text-4xl">
-                  <CountUp end={30} />
-                </span>
-                <span className="text-2xl font-light text-ink/30">&rarr;</span>
-                <span className="text-5xl font-black tracking-tight text-brand lg:text-6xl">
-                  <CountUp end={75} />
-                </span>
-              </div>
+              <span className="text-5xl font-black tracking-tight text-brand lg:text-6xl">
+                <CountUp end={200} prefix="+" suffix="%" />
+              </span>
               <p className="mt-2 font-body text-sm text-steel-light">
-                qualified leads/month in 9 months
+                Increase in site traffic year-over-year
               </p>
             </div>
             <div className="hidden h-16 w-px shrink-0 bg-black/10 sm:block" />
             <div className="flex-1">
               <h2 className="text-xl font-extrabold tracking-tight text-ink sm:text-2xl">
-                How we doubled qualified leads for a 30-year-old Oklahoma
-                metals manufacturer.
+                How we tripled site traffic for a 30-year-old Oklahoma metals
+                manufacturer.
               </h2>
               <p className="mt-2 max-w-2xl font-body text-sm leading-relaxed text-steel-light">
                 New website, call tracking, a CRM that stopped losing quotes,
@@ -391,7 +385,7 @@ export default function Home() {
             </div>
             <div>
               <p className="font-label text-[13px] font-semibold tracking-[0.32em] text-brand uppercase">
-                &mdash; Client Spotlight
+                Client Spotlight
               </p>
               <p className="mt-5 font-body text-xl leading-relaxed text-white/80">
                 &ldquo;We tried two agencies before this one. Both took my
