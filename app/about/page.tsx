@@ -12,7 +12,7 @@ export default function AboutPage() {
       <PageHeader eyebrow="About Us" title="One industry. Done well." />
 
       <div className="mx-auto max-w-2xl px-6 pb-24 lg:px-14">
-        <div className="space-y-6 leading-7 text-white/62">
+        <div className="space-y-6 font-body leading-7 text-white/62">
           <p>
             Most metals manufacturers and material suppliers end up with a
             generalist agency that spends the first three months learning the
@@ -41,7 +41,7 @@ export default function AboutPage() {
           <h2 className="font-label text-[11.5px] font-semibold tracking-[0.24em] text-brand uppercase">
             Our Approach
           </h2>
-          <ul className="mt-5 space-y-3.5 text-sm text-white/62">
+          <ul className="mt-5 space-y-3.5 font-body text-sm text-white/62">
             <li className="flex items-start gap-2.5">
               <span className="mt-1.5 h-[5px] w-[5px] shrink-0 bg-brand" />
               Foundation first, then demand capture, then the compounding

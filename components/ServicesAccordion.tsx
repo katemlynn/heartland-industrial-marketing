@@ -35,7 +35,7 @@ export default function ServicesAccordion({ services }: { services: Service[] })
                 <span className="flex-1 font-sans text-[19px] font-extrabold tracking-tight text-cream sm:text-[26px]">
                   {service.title}
                 </span>
-                <span className="hidden flex-1 text-right text-[15px] text-white/50 sm:block">
+                <span className="hidden flex-1 text-right font-body text-[15px] text-white/50 sm:block">
                   {service.tagline}
                 </span>
                 <svg
@@ -60,10 +60,10 @@ export default function ServicesAccordion({ services }: { services: Service[] })
               >
                 <div className="overflow-hidden">
                   <div className="px-4 pb-8 pl-[72px]">
-                    <p className="mb-4 max-w-xl text-[15px] leading-relaxed text-white/60">
+                    <p className="mb-4 max-w-xl font-body text-[15px] leading-relaxed text-white/60">
                       {service.description}
                     </p>
-                    <ul className="grid max-w-2xl grid-cols-1 gap-x-8 gap-y-2.5 sm:grid-cols-2">
+                    <ul className="grid max-w-2xl grid-cols-1 gap-x-8 gap-y-2.5 font-body sm:grid-cols-2">
                       {service.items.map((item) => (
                         <li
                           key={item}

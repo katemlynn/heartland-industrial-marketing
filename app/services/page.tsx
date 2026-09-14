@@ -162,7 +162,7 @@ export default function ServicesPage() {
         <h2 className="text-3xl font-extrabold tracking-tight text-cream sm:text-4xl">
           Want to see how this fits your operation?
         </h2>
-        <p className="mx-auto mt-3 max-w-md text-white/62">
+        <p className="mx-auto mt-3 max-w-md font-body text-white/62">
           Tell us about your company. We&apos;ll do a quick teardown of your
           current marketing and walk you through what we&apos;d fix first on
           the call.

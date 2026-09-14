@@ -17,7 +17,7 @@ export default function ContactPage() {
       />
 
       <div className="mx-auto max-w-2xl px-6 pb-24 lg:px-14">
-        <ul className="mb-10 space-y-2.5 text-sm text-white/62">
+        <ul className="mb-10 space-y-2.5 font-body text-sm text-white/62">
           <li className="flex items-start gap-2.5">
             <span className="mt-1.5 h-[5px] w-[5px] shrink-0 bg-brand" />
             Direct call with a senior strategist, not a salesperson
@@ -36,7 +36,7 @@ export default function ContactPage() {
           <ContactForm />
         </div>
 
-        <p className="mt-4 text-center text-xs text-white/40">
+        <p className="mt-4 text-center font-body text-xs text-white/40">
           We respond within one business day.
         </p>
       </div>

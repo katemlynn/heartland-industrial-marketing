@@ -66,7 +66,7 @@ export default function ManufacturingPage() {
           <h1 className="mt-4 max-w-2xl text-4xl font-extrabold tracking-tight text-cream sm:text-5xl">
             Marketing Agency for Manufacturing &amp; Metals Companies
           </h1>
-          <p className="mt-6 max-w-xl text-lg text-white/68">
+          <p className="mt-6 max-w-xl font-body text-lg text-white/68">
             We help metals companies, material suppliers, and manufacturers
             get found, look credible, and win the jobs they&apos;re losing
             today. Built for one industry. No junior hand-offs. Month to
@@ -93,7 +93,7 @@ export default function ManufacturingPage() {
           <h2 className="mt-3 max-w-2xl text-3xl font-extrabold tracking-tight text-cream sm:text-4xl">
             Built for one industry. We already know what moves the needle.
           </h2>
-          <p className="mt-4 max-w-2xl text-white/62">
+          <p className="mt-4 max-w-2xl font-body text-white/62">
             Generalist agencies spend their first three months learning your
             business on your dime. We start work knowing the difference
             between a purlin and a panel, what FABTECH costs to exhibit at,
@@ -122,7 +122,7 @@ export default function ManufacturingPage() {
             manufacturer.
           </h2>
 
-          <div className="mt-7 space-y-4 leading-relaxed text-white/62">
+          <div className="mt-7 space-y-4 font-body leading-relaxed text-white/62">
             <p>
               A family-run Oklahoma metal fabricator manufactures metal
               building kits, roofing systems, and laser-cut components from
@@ -154,13 +154,13 @@ export default function ManufacturingPage() {
             {CASE_STUDY_STATS.map((stat) => (
               <div key={stat.label} className="border border-white/16 bg-white/[0.02] p-6">
                 <p className="text-2xl font-extrabold text-brand">{stat.value}</p>
-                <p className="mt-1.5 text-sm text-white/58">{stat.label}</p>
+                <p className="mt-1.5 font-body text-sm text-white/58">{stat.label}</p>
               </div>
             ))}
           </div>
 
           <blockquote className="mt-11 border border-white/16 bg-white/[0.02] p-7">
-            <p className="text-cream">
+            <p className="font-body text-cream">
               &ldquo;Heartland rebuilt our site, set up our CRM, and grew our
               qualified leads from 30 to 75 a month. They feel like part of
               our team, not a vendor.&rdquo;
@@ -176,7 +176,7 @@ export default function ManufacturingPage() {
         <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
           Want results like this for your operation?
         </h2>
-        <p className="mx-auto mt-3 max-w-xl text-white/65">
+        <p className="mx-auto mt-3 max-w-xl font-body text-white/65">
           Tell us about your company. We&apos;ll do a quick teardown of your
           current marketing and walk you through what we&apos;d fix first on
           the call.

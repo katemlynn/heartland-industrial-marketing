@@ -14,9 +14,9 @@ export default function PrivacyPage() {
       <PageHeader eyebrow="Legal" title="Privacy Policy" />
 
       <div className="mx-auto max-w-2xl px-6 pb-24 lg:px-14">
-        <p className="mb-10 text-sm text-white/40">Effective {EFFECTIVE_DATE}</p>
+        <p className="mb-10 font-body text-sm text-white/40">Effective {EFFECTIVE_DATE}</p>
 
-        <div className="prose prose-invert max-w-none prose-headings:font-extrabold prose-headings:tracking-tight prose-headings:text-cream prose-p:text-white/62 prose-a:text-brand prose-a:no-underline hover:prose-a:text-white prose-strong:text-cream prose-li:text-white/62">
+        <div className="prose prose-invert max-w-none font-body prose-headings:font-sans prose-headings:font-extrabold prose-headings:tracking-tight prose-headings:text-cream prose-p:text-white/62 prose-a:text-brand prose-a:no-underline hover:prose-a:text-white prose-strong:text-cream prose-li:text-white/62">
           <p>
             Heartland Industrial Marketing (&quot;Heartland,&quot;
             &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) operates

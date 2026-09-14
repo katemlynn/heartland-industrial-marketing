@@ -35,7 +35,9 @@ export default function BlogIndexPage() {
                   {post.title}
                 </Link>
               </h2>
-              <p className="mt-2.5 text-sm leading-relaxed text-white/58">{post.excerpt}</p>
+              <p className="mt-2.5 font-body text-sm leading-relaxed text-white/58">
+                {post.excerpt}
+              </p>
               <Link
                 href={`/blog/${post.slug}`}
                 className="mt-3 inline-block text-sm font-semibold text-brand hover:text-white"

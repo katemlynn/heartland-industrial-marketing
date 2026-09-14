@@ -25,7 +25,9 @@ export default function PageHeader({
         {title}
       </h1>
       {description && (
-        <p className="relative z-[2] mt-4 max-w-md text-lg text-white/65">{description}</p>
+        <p className="relative z-[2] mt-4 max-w-md font-body text-lg text-white/65">
+          {description}
+        </p>
       )}
     </header>
   );
