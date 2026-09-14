@@ -380,7 +380,7 @@ export default function Home() {
           <div className="mt-7 flex flex-col gap-8 sm:flex-row sm:items-center">
             <div className="flex shrink-0 flex-col items-start bg-steel px-8 py-6 text-white">
               <span className="text-3xl font-extrabold text-brand">30 &rarr; 75</span>
-              <span className="mt-1 text-sm text-white/65">
+              <span className="mt-1 font-body text-sm text-white/65">
                 qualified leads/month in 9 months
               </span>
             </div>

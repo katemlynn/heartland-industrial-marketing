@@ -165,7 +165,7 @@ export default function ManufacturingPage() {
               qualified leads from 30 to 75 a month. They feel like part of
               our team, not a vendor.&rdquo;
             </p>
-            <footer className="mt-3 text-sm font-medium text-white/50">
+            <footer className="mt-3 font-body text-sm font-medium text-white/50">
               — Owner, Oklahoma-based Metal Fabricator
             </footer>
           </blockquote>
