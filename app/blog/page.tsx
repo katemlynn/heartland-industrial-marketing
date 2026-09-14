@@ -35,34 +35,29 @@ export default function BlogIndexPage() {
 
       <div className="mx-auto max-w-4xl px-6 pb-24 lg:px-14">
         <div className="border-t border-white/16">
-          {posts.map((post, index) => (
+          {posts.map((post) => (
             <Link
               key={post.slug}
               href={`/blog/${post.slug}`}
-              className="group flex flex-col gap-2 border-b border-white/16 px-4 py-9 -mx-4 transition-colors hover:bg-white/[0.03] sm:grid sm:grid-cols-[64px_1fr] sm:gap-8"
+              className="group block border-b border-white/16 px-4 py-9 -mx-4 transition-colors hover:bg-white/[0.03]"
             >
-              <span className="font-label text-sm font-semibold text-white/25 transition-colors group-hover:text-brand">
-                {String(index + 1).padStart(2, "0")}
+              <time className="font-label text-[11px] font-medium tracking-[0.18em] text-white/40 uppercase">
+                {new Date(`${post.date}T00:00:00`).toLocaleDateString("en-US", {
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                })}
+              </time>
+              <h2 className="mt-2 text-2xl font-extrabold tracking-tight text-cream transition-colors group-hover:text-brand sm:text-[26px]">
+                {post.title}
+              </h2>
+              <p className="mt-2.5 max-w-2xl font-body text-[15px] leading-relaxed text-white/58">
+                {post.excerpt}
+              </p>
+              <span className="mt-4 flex items-center gap-2 font-body text-sm font-semibold text-brand">
+                Read article
+                <ArrowIcon className="transition-transform group-hover:translate-x-1" />
               </span>
-              <div>
-                <time className="font-label text-[11px] font-medium tracking-[0.18em] text-white/40 uppercase">
-                  {new Date(`${post.date}T00:00:00`).toLocaleDateString("en-US", {
-                    year: "numeric",
-                    month: "long",
-                    day: "numeric",
-                  })}
-                </time>
-                <h2 className="mt-2 text-2xl font-extrabold tracking-tight text-cream transition-colors group-hover:text-brand sm:text-[26px]">
-                  {post.title}
-                </h2>
-                <p className="mt-2.5 max-w-2xl font-body text-[15px] leading-relaxed text-white/58">
-                  {post.excerpt}
-                </p>
-                <span className="mt-4 flex items-center gap-2 font-body text-sm font-semibold text-brand">
-                  Read article
-                  <ArrowIcon className="transition-transform group-hover:translate-x-1" />
-                </span>
-              </div>
             </Link>
           ))}
         </div>
