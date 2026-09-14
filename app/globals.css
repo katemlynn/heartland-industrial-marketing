@@ -29,6 +29,13 @@
   --font-mono-tag: var(--font-plex-mono);
 }
 
+/* Safari renders its own disclosure triangle on <summary> via this
+   pseudo-element regardless of list-style; Chrome already drops it once
+   the summary has display:flex, but Safari needs it hidden explicitly. */
+summary::-webkit-details-marker {
+  display: none;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
