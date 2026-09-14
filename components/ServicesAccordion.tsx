@@ -61,11 +61,7 @@ export default function ServicesAccordion({ services }: { services: Service[] })
                     </p>
                     <ul className="grid max-w-2xl grid-cols-1 gap-x-8 gap-y-2.5 font-body sm:grid-cols-2">
                       {service.items.map((item) => (
-                        <li
-                          key={item}
-                          className="flex items-start gap-2 text-sm text-white/68"
-                        >
-                          <span className="mt-1.5 h-[5px] w-[5px] shrink-0 bg-brand" />
+                        <li key={item} className="text-sm text-white/68">
                           {item}
                         </li>
                       ))}
