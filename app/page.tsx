@@ -328,14 +328,26 @@ export default function Home() {
           <p className="font-label text-[13px] font-semibold tracking-[0.32em] text-brand uppercase">
             &mdash; Case Study
           </p>
-          <div className="mt-7 flex flex-col gap-8 sm:flex-row sm:items-center">
-            <div className="flex shrink-0 flex-col items-start bg-steel px-8 py-6 text-white">
-              <span className="text-3xl font-extrabold text-brand">30 &rarr; 75</span>
-              <span className="mt-1 font-body text-sm text-white/65">
+          <Link
+            href="/marketing-agency-for-manufacturing#case-study"
+            className="group mt-7 flex flex-col gap-8 border border-black/12 p-8 transition-colors hover:border-brand/40 hover:bg-black/[0.02] sm:flex-row sm:items-center lg:p-10"
+          >
+            <div className="shrink-0">
+              <div className="flex items-baseline gap-2.5">
+                <span className="text-5xl font-black tracking-tight text-brand lg:text-6xl">
+                  30
+                </span>
+                <span className="text-2xl font-light text-ink/30">&rarr;</span>
+                <span className="text-5xl font-black tracking-tight text-ink lg:text-6xl">
+                  75
+                </span>
+              </div>
+              <p className="mt-2 font-body text-sm text-steel-light">
                 qualified leads/month in 9 months
-              </span>
+              </p>
             </div>
-            <div>
+            <div className="hidden h-16 w-px shrink-0 bg-black/10 sm:block" />
+            <div className="flex-1">
               <h2 className="text-xl font-extrabold tracking-tight text-ink sm:text-2xl">
                 How we doubled qualified leads for a 30-year-old Oklahoma
                 metals manufacturer.
@@ -345,14 +357,12 @@ export default function Home() {
                 and a trade show program that actually paid back — rebuilt
                 as one system, not six disconnected projects.
               </p>
-              <Link
-                href="/marketing-agency-for-manufacturing#case-study"
-                className="mt-4 inline-block text-sm font-semibold text-brand hover:text-brand-dark"
-              >
-                Read the full case study &rarr;
-              </Link>
             </div>
-          </div>
+            <span className="flex shrink-0 items-center gap-2 font-body text-sm font-semibold text-brand sm:self-start">
+              Read the case study
+              <ArrowIcon className="transition-transform group-hover:translate-x-1" />
+            </span>
+          </Link>
         </div>
       </section>
 
@@ -540,9 +550,9 @@ export default function Home() {
   );
 }
 
-function ArrowIcon() {
+function ArrowIcon({ className }: { className?: string }) {
   return (
-    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className={className}>
       <path
         d="M3 8h10M9 4l4 4-4 4"
         stroke="currentColor"
