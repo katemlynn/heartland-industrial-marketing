@@ -21,7 +21,6 @@ const PAIN_POINTS = [
     title: "Your ads aren't paying back.",
     description:
       "Money going into Google Ads with nothing to show for it. You can't tell what's working, and the agency running it can't either.",
-    dark: true,
     icon: (
       <>
         <polyline
@@ -46,7 +45,6 @@ const PAIN_POINTS = [
     title: "You're invisible to the people searching.",
     description:
       "The competitor across town has 240 reviews. You have 11. Quotes are reaching them, not you.",
-    dark: false,
     icon: (
       <>
         <circle cx="10" cy="10" r="6.5" stroke="currentColor" strokeWidth="1.6" />
@@ -67,7 +65,6 @@ const PAIN_POINTS = [
     title: "You sell the materials. Someone else gets the credit.",
     description:
       "Your panels end up on a building you'll never visit, installed by a GC you didn't meet. The end owner never knows your name.",
-    dark: false,
     icon: (
       <>
         <rect
@@ -110,12 +107,6 @@ const COMPARISONS = [
 ];
 
 const TESTIMONIALS = [
-  {
-    initials: "WC",
-    name: "Wade C.",
-    quote:
-      "We tried two agencies before this one. Both took my money and had nothing to show for it after months. Heartland got our Google profile from 14 reviews to 80+ in 90 days, and the quote requests followed. Best money we've ever spent on marketing.",
-  },
   {
     initials: "JP",
     name: "Jeremy P.",
@@ -223,34 +214,11 @@ export default function Home() {
           </Link>
         </div>
 
-        <div className="absolute bottom-10 left-6 z-[2] hidden flex-col items-center gap-3.5 font-label text-[11px] tracking-[0.3em] text-white/50 sm:flex lg:left-14">
+        <div className="absolute right-6 bottom-10 z-[2] hidden flex-col items-center gap-3.5 font-label text-[11px] tracking-[0.3em] text-white/50 sm:flex lg:right-14">
           <span>SCROLL</span>
           <div className="relative h-14 w-px overflow-hidden bg-white/20">
             <div className="absolute top-[-20px] left-0 h-5 w-full bg-brand [animation:scrollCue_1.8s_ease-in-out_infinite]" />
           </div>
-        </div>
-
-        {/* Heat tag — a signature nod to a mill certification tag, carrying real proof points */}
-        <div
-          className="absolute right-6 bottom-8 z-[3] hidden w-[236px] rotate-[-3deg] bg-cream p-5 pl-7 text-ink shadow-[0_18px_34px_rgba(0,0,0,0.35)] sm:block lg:right-14"
-        >
-          <span className="absolute top-1/2 left-3 h-[11px] w-[11px] -translate-y-1/2 rounded-full border-2 border-ink bg-cream" />
-          {[
-            ["Heat no.", "2026-014"],
-            ["Grade", "Verified results"],
-            ["Reviews", "14 → 80+ / 90 days"],
-            ["Pipeline", "2× in 6 months"],
-          ].map(([k, v], i, arr) => (
-            <div
-              key={k}
-              className={`flex items-baseline justify-between gap-3 py-1.5 font-mono-tag text-[11.5px] ${
-                i !== arr.length - 1 ? "border-b border-ink/12" : ""
-              }`}
-            >
-              <span className="text-ink/55">{k}</span>
-              <span className="text-right font-medium">{v}</span>
-            </div>
-          ))}
         </div>
       </section>
 
@@ -278,61 +246,28 @@ export default function Home() {
         <h2 className="mx-auto mt-3 max-w-6xl text-3xl font-extrabold tracking-tight text-ink sm:text-4xl">
           Three patterns we hear from metals owners every week.
         </h2>
-        <div className="mx-auto mt-12 grid max-w-6xl gap-6 sm:grid-cols-3">
+        <div className="mx-auto mt-12 max-w-6xl divide-y divide-black/12 border-t border-black/12">
           {PAIN_POINTS.map((point, index) => (
             <Reveal key={point.title} delay={index * 90}>
-              <div
-                className={`relative min-h-[440px] overflow-hidden border border-black/12 p-8 ${
-                  point.dark ? "bg-[#14161a]" : "bg-[#eae7dd]"
-                }`}
-              >
-                {point.dark && (
-                  <div
-                    className="absolute inset-0 z-0"
-                    style={{
-                      backgroundImage:
-                        "repeating-linear-gradient(90deg, rgba(244,242,238,0.05) 0px, rgba(244,242,238,0.05) 1px, transparent 1px, transparent 48px), repeating-linear-gradient(0deg, rgba(244,242,238,0.05) 0px, rgba(244,242,238,0.05) 1px, transparent 1px, transparent 48px)",
-                    }}
-                  />
-                )}
-                <span
-                  className={`absolute top-1.5 right-4 z-0 text-[116px] leading-none font-light ${
-                    point.dark ? "text-cream/14" : "text-ink/10"
-                  }`}
-                >
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-                <div className="relative z-[2] flex h-full flex-col justify-between">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    className={`h-[30px] w-[30px] ${point.dark ? "text-brand" : "text-ink"}`}
-                  >
+              <div className="flex flex-col gap-4 py-10 sm:grid sm:grid-cols-[64px_1fr] sm:gap-8">
+                <div className="flex items-center gap-4 sm:flex-col sm:items-start sm:gap-3">
+                  <span className="font-label text-sm font-semibold text-ink/30">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <svg viewBox="0 0 24 24" fill="none" className="h-7 w-7 text-brand">
                     {point.icon}
                   </svg>
-                  <div>
-                    <p
-                      className={`mb-3 font-label text-[11.5px] font-medium tracking-[0.24em] uppercase ${
-                        point.dark ? "text-brand" : "text-ink/50"
-                      }`}
-                    >
-                      {point.label}
-                    </p>
-                    <h3
-                      className={`mb-2.5 text-[23px] leading-tight font-bold tracking-tight ${
-                        point.dark ? "text-cream" : "text-ink"
-                      }`}
-                    >
-                      {point.title}
-                    </h3>
-                    <p
-                      className={`font-body text-[14.5px] leading-relaxed ${
-                        point.dark ? "text-cream/60" : "text-ink/60"
-                      }`}
-                    >
-                      {point.description}
-                    </p>
-                  </div>
+                </div>
+                <div>
+                  <p className="mb-2 font-label text-[11.5px] font-medium tracking-[0.24em] text-ink/45 uppercase">
+                    {point.label}
+                  </p>
+                  <h3 className="mb-2.5 text-2xl font-bold tracking-tight text-ink">
+                    {point.title}
+                  </h3>
+                  <p className="max-w-2xl font-body text-[15px] leading-relaxed text-ink/60">
+                    {point.description}
+                  </p>
                 </div>
               </div>
             </Reveal>
@@ -407,7 +342,46 @@ export default function Home() {
 
       {/* ---------- TESTIMONIALS ---------- */}
       <section className="border-t border-white/8 bg-steel px-6 py-24 lg:px-14">
-        <div className="mx-auto grid max-w-6xl gap-16 lg:grid-cols-2">
+        <div className="mx-auto max-w-6xl">
+          {/* Spotlight */}
+          <div className="grid gap-10 border-b border-white/12 pb-16 lg:grid-cols-2 lg:items-center">
+            <div className="relative h-[280px] overflow-hidden lg:h-[380px]">
+              <Image
+                src="/hero-laser-cut.jpg"
+                alt="Fiber laser cutting steel plate at a Heartland client's fabrication shop"
+                fill
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                className="object-cover"
+                style={{ objectPosition: "center 60%" }}
+              />
+            </div>
+            <div>
+              <p className="font-label text-[13px] font-semibold tracking-[0.32em] text-brand uppercase">
+                &mdash; Client Spotlight
+              </p>
+              <p className="mt-5 font-body text-xl leading-relaxed text-white/80">
+                &ldquo;We tried two agencies before this one. Both took my
+                money and had nothing to show for it after months.{" "}
+                <strong className="font-semibold text-cream">
+                  Heartland got our Google profile from 14 reviews to 80+ in
+                  90 days
+                </strong>
+                , and the quote requests followed. Best money we&apos;ve ever
+                spent on marketing.&rdquo;
+              </p>
+              <div className="mt-7 flex flex-wrap items-center gap-3">
+                <span className="font-mono-tag text-sm font-medium text-cream">
+                  Wade C.
+                </span>
+                <span className="h-1 w-1 rounded-full bg-white/30" />
+                <span className="font-body text-sm text-white/50">
+                  14 &rarr; 80+ Google reviews in 90 days
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-16 grid gap-16 lg:grid-cols-2">
           <div>
             <p className="font-label text-[13px] font-semibold tracking-[0.32em] text-brand uppercase">
               &mdash; Reviews
@@ -477,6 +451,7 @@ export default function Home() {
                 </figure>
               ))}
             </div>
+          </div>
           </div>
         </div>
       </section>
