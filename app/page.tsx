@@ -228,12 +228,26 @@ export default function Home() {
           <p className="text-center font-label text-xs font-medium tracking-[0.24em] text-steel-light uppercase">
             Full Service Marketing
           </p>
-          <div className="mt-5 flex flex-wrap justify-center gap-x-8 gap-y-3">
-            {SERVICES.map((service) => (
-              <span key={service} className="text-sm font-medium text-steel-light">
-                {service}
-              </span>
-            ))}
+          <div
+            className="relative mt-5 overflow-hidden border-y border-brand/25 py-3.5"
+            style={{
+              maskImage:
+                "linear-gradient(to right, transparent, #000 8%, #000 92%, transparent)",
+              WebkitMaskImage:
+                "linear-gradient(to right, transparent, #000 8%, #000 92%, transparent)",
+            }}
+          >
+            <div className="flex w-max [animation:marqueeScrollX_32s_linear_infinite] hover:[animation-play-state:paused]">
+              {[...SERVICES, ...SERVICES].map((service, i) => (
+                <span
+                  key={`${service}-${i}`}
+                  className="flex shrink-0 items-center gap-8 pr-8 text-sm font-medium whitespace-nowrap text-steel-light"
+                >
+                  {service}
+                  <span className="text-steel-light/35">&bull;</span>
+                </span>
+              ))}
+            </div>
           </div>
         </div>
       </section>
