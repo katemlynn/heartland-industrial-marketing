@@ -5,7 +5,6 @@ import Reveal from "@/components/Reveal";
 
 interface Service {
   title: string;
-  tagline: string;
   description: string;
   items: string[];
 }
@@ -34,9 +33,6 @@ export default function ServicesAccordion({ services }: { services: Service[] })
                 </span>
                 <span className="flex-1 font-sans text-[19px] font-extrabold tracking-tight text-cream sm:text-[26px]">
                   {service.title}
-                </span>
-                <span className="hidden flex-1 text-right font-body text-[15px] text-white/50 sm:block">
-                  {service.tagline}
                 </span>
                 <svg
                   viewBox="0 0 16 16"
