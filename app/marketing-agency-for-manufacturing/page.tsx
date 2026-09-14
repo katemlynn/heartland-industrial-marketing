@@ -92,7 +92,7 @@ export default function ManufacturingPage() {
             Who We Serve
           </p>
           <h2 className="mt-3 max-w-2xl text-3xl font-extrabold tracking-tight text-cream sm:text-4xl">
-            Built for one industry. We already know what moves the needle.
+            We already know what moves the needle.
           </h2>
           <p className="mt-4 max-w-2xl font-body text-white/62">
             Generalist agencies spend their first three months learning your

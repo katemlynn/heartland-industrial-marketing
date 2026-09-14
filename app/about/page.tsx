@@ -12,7 +12,7 @@ export default function AboutPage() {
       <PageHeader
         eyebrow="About Us"
         title="One industry. Done well."
-        description="We partner with metals manufacturers and material suppliers to build marketing systems that generate leads and drive long-term growth."
+        description="We partner with owner-operated metals companies to build marketing systems that generate leads and drive long-term growth."
       />
 
       <div className="mx-auto max-w-2xl px-6 pb-24 lg:px-14">
