@@ -355,12 +355,12 @@ export default function Home() {
           <div className="grid gap-10 border-b border-white/12 pb-16 lg:grid-cols-2 lg:items-center">
             <div className="relative h-[280px] overflow-hidden lg:h-[380px]">
               <Image
-                src="/hero-laser-cut.jpg"
-                alt="Fiber laser cutting steel plate at a Heartland client's fabrication shop"
+                src="/testimonial-welder.jpg"
+                alt="A welder fabricating a steel beam at a Heartland client's shop"
                 fill
                 sizes="(min-width: 1024px) 50vw, 100vw"
                 className="object-cover"
-                style={{ objectPosition: "center 60%" }}
+                style={{ objectPosition: "center 40%" }}
               />
             </div>
             <div>
