@@ -409,8 +409,7 @@ export default function Home() {
                 </span>
                 <span className="h-1 w-1 rounded-full bg-white/30" />
                 <span className="font-body text-sm text-white/50">
-                  <CountUp end={35} /> &rarr; <CountUp end={80} suffix="+" />{" "}
-                  Google reviews in 4 months
+                  35 &rarr; 80+ Google reviews in 4 months
                 </span>
               </div>
             </div>
