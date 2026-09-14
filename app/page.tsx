@@ -92,17 +92,20 @@ const COMPARISONS = [
   {
     label: "vs. a generalist agency",
     title: "They don't speak metals.",
-    description: "We do. Built for one industry. We already know what moves the needle.",
+    description:
+      "Most agencies spend the first three months learning the difference between a purlin and a panel — on your dime. We already know what moves a GC to pick up the phone.",
   },
   {
     label: "vs. one in-house hire",
     title: "One person can't be six specialists.",
-    description: "We're a team of specialists. For less than one full-time hire.",
+    description:
+      "A single hire can't cover strategist, designer, ad buyer, and copywriter. You get a full team, senior on every discipline, for less than one full-time salary.",
   },
   {
     label: "vs. the cheap freelancer",
     title: "$500/month buys $500/month of effort.",
-    description: "Senior marketers, month-to-month. Not earning our keep, you walk.",
+    description:
+      "Senior marketers, month-to-month, no contract keeping either of us stuck. If we're not earning our keep, you walk.",
   },
 ];
 
@@ -298,17 +301,22 @@ export default function Home() {
           <h2 className="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">
             Why we&apos;re a better bet than the alternatives.
           </h2>
-          <div className="mt-12 grid gap-6 sm:grid-cols-3">
+          <div className="mt-12 divide-y divide-white/12 border-t border-white/12">
             {COMPARISONS.map((item, index) => (
               <Reveal key={item.label} delay={index * 90}>
-                <div className="border border-white/15 p-7">
-                  <p className="font-label text-[11.5px] font-medium tracking-[0.2em] text-brand uppercase">
-                    {item.label}
-                  </p>
-                  <h3 className="mt-3 text-lg font-bold">{item.title}</h3>
-                  <p className="mt-2.5 font-body text-sm leading-relaxed text-white/65">
-                    {item.description}
-                  </p>
+                <div className="flex flex-col gap-2 py-8 sm:grid sm:grid-cols-[64px_1fr] sm:gap-8">
+                  <span className="font-label text-sm font-semibold text-white/25">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <div>
+                    <p className="font-label text-[11.5px] font-medium tracking-[0.2em] text-brand uppercase">
+                      {item.label}
+                    </p>
+                    <h3 className="mt-2 text-xl font-bold sm:text-2xl">{item.title}</h3>
+                    <p className="mt-2.5 max-w-2xl font-body text-[15px] leading-relaxed text-white/65">
+                      {item.description}
+                    </p>
+                  </div>
                 </div>
               </Reveal>
             ))}
