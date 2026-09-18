@@ -54,9 +54,20 @@ export async function POST(request: Request) {
   const to = process.env.CONTACT_EMAIL_TO;
 
   if (!apiKey || !to) {
-    // Not configured yet — log so submissions aren't silently lost during
-    // setup, but don't fail the request just because email isn't wired up.
     console.log("New contact form submission (email not configured):", submission);
+
+    // In production, a missing key must never look like success — the visitor
+    // would see "Thanks!" while the lead goes nowhere. Fail loudly instead.
+    if (process.env.NODE_ENV === "production") {
+      console.error("RESEND_API_KEY or CONTACT_EMAIL_TO is not set in production.");
+      return NextResponse.json(
+        { error: "Something went wrong sending your message. Please try again." },
+        { status: 500 }
+      );
+    }
+
+    // Local dev without email configured: log and carry on so the form is
+    // still usable while setting up.
     return NextResponse.json({ ok: true });
   }
 
