@@ -93,8 +93,8 @@ export default function PrivacyPage() {
             You can ask us what information we have about you, ask us to
             correct it, or ask us to delete it, at any time. To do so,
             email us at{" "}
-            <a href="mailto:kate@sittonbuildinggroup.com">
-              kate@sittonbuildinggroup.com
+            <a href="mailto:kate@goleaddash.com">
+              kate@goleaddash.com
             </a>
             . We&apos;ll respond within a reasonable time.
           </p>
@@ -125,8 +125,8 @@ export default function PrivacyPage() {
           <h2>Contact Us</h2>
           <p>
             Questions about this policy or your information? Email{" "}
-            <a href="mailto:kate@sittonbuildinggroup.com">
-              kate@sittonbuildinggroup.com
+            <a href="mailto:kate@goleaddash.com">
+              kate@goleaddash.com
             </a>{" "}
             or use our{" "}
             <a href="/contact">contact form</a>.
