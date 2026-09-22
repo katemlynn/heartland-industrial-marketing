@@ -26,6 +26,18 @@ export default function Footer() {
           >
             For Manufacturing
           </Link>
+          <Link
+            href="/services/seo-for-manufacturers"
+            className="transition-colors hover:text-white"
+          >
+            SEO
+          </Link>
+          <Link
+            href="/services/lead-generation-for-manufacturers"
+            className="transition-colors hover:text-white"
+          >
+            Lead Generation
+          </Link>
           <Link href="/about" className="transition-colors hover:text-white">
             About
           </Link>
