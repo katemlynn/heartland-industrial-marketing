@@ -4,7 +4,7 @@ import { pageMetadata } from "@/lib/site";
 import PageHeader from "@/components/PageHeader";
 
 export const metadata = pageMetadata(
-  "Marketing Insights for Metals & Material Companies | Heartland Industrial Marketing",
+  "Marketing Advice for Metals Companies | Heartland",
   "Practical playbooks for metals manufacturers and material suppliers. No agency BS, no SEO filler — just what we'd actually do for your operation."
 );
 

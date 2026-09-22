@@ -4,7 +4,7 @@ import ServicesAccordion from "@/components/ServicesAccordion";
 import PageHeader from "@/components/PageHeader";
 
 export const metadata = pageMetadata(
-  "Marketing Services for Metals & Material Companies | Heartland Industrial Marketing",
+  "Marketing Services for Metals Companies | Heartland",
   "The full playbook we run for metals manufacturers and material suppliers. Engagements are bundled to fit your company, not sold à la carte."
 );
 

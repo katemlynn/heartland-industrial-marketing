@@ -1,5 +1,6 @@
 ---
 title: "How to Market a Steel Fabricator: A Complete Playbook for Owner-Operators"
+seoTitle: "Metal Fabrication Marketing: A Playbook for Fab Shops"
 date: "2026-09-01"
 excerpt: "Most metals companies underspend, overspend, or spend in the wrong order. Here's the actual sequence: what to fix first, what to spend on, and what to skip."
 ---

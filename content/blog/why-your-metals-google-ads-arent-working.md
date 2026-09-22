@@ -1,5 +1,6 @@
 ---
 title: "Why Your Metals Company's Google Ads Aren't Working (And How to Fix Them)"
+seoTitle: "Why Your Metals Google Ads Aren't Working"
 date: "2026-08-11"
 excerpt: "If you're spending money on Google Ads and not seeing quote requests, it's almost always one of five things. Here's the diagnosis and the fix."
 ---

@@ -14,6 +14,9 @@ export interface BlogPostMeta {
 }
 
 export interface BlogPost extends BlogPostMeta {
+  // Optional shorter title for search results and browser tabs, for posts
+  // whose headline runs past the ~60 characters Google shows.
+  seoTitle?: string;
   contentHtml: string;
 }
 
@@ -56,6 +59,7 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
     title: data.title as string,
     date: data.date as string,
     excerpt: data.excerpt as string,
+    seoTitle: data.seoTitle as string | undefined,
     contentHtml: processed.toString(),
   };
 }

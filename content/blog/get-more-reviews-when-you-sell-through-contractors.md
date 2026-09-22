@@ -1,7 +1,7 @@
 ---
 title: "How to Get More Reviews When You Sell Through Contractors"
 date: "2026-08-25"
-excerpt: "Your panels end up on a building you'll never visit, installed by a GC you didn't meet. The end owner never knows your name. Here's how to capture reviews anyway."
+excerpt: "Your panels end up on a building you'll never visit, installed by a GC you didn't meet. The end owner never knows your name. Here's how to get reviews anyway."
 ---
 
 This is the most common pattern in metals supply: you manufacture or distribute the materials, a general contractor installs them, and the end owner never knows you exist. The reviews go to the GC. The reputation goes to the GC. You stay invisible.
