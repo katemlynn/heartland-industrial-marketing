@@ -30,7 +30,7 @@ const plexMono = IBM_Plex_Mono({
 });
 
 const DEFAULT_TITLE =
-  "Marketing Agency for Metals & Manufacturing Companies | Heartland Industrial Marketing";
+  "Industrial Marketing Agency for Metals | Heartland";
 const DEFAULT_DESCRIPTION =
   "We help metals and manufacturing companies get found, look credible, and win the jobs they're losing today.";
 

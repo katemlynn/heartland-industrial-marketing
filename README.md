@@ -40,6 +40,18 @@ The filename (without `.md`) becomes the URL, e.g. `my-new-post.md` becomes
 `/blog/my-new-post`. No code changes are needed — it will automatically show
 up on the `/blog` index page.
 
+The `title` is the headline on the page and, by default, the title shown in
+Google results. Google cuts titles off at around 60 characters, so if your
+headline is longer than that, add an optional shorter `seoTitle` line to use
+in search results and browser tabs instead:
+
+```markdown
+seoTitle: "A Shorter Title for Google"
+```
+
+Keep the `excerpt` under about 160 characters too — it doubles as the page's
+description in search results.
+
 ## Editing page content
 
 Each page's text lives directly in its `page.tsx` file as plain text/JSX —

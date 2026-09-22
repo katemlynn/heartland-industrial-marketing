@@ -16,7 +16,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const post = await getPostBySlug(slug);
   if (!post) return {};
 
-  const title = `${post.title} | Heartland Industrial Marketing`;
+  // No brand suffix: Google already shows the site name above each result,
+  // and the suffix pushed every post title past the ~60 characters it shows.
+  const title = post.seoTitle ?? post.title;
 
   return {
     title,

@@ -2,7 +2,7 @@ import Link from "next/link";
 import { pageMetadata } from "@/lib/site";
 
 export const metadata = pageMetadata(
-  "Marketing Agency for Manufacturing & Metals Companies | Heartland Industrial Marketing",
+  "Manufacturing Marketing Agency for Metals | Heartland",
   "We help metals companies, material suppliers, and manufacturers get found, look credible, and win the jobs they're losing today. Built for one industry."
 );
 
