@@ -7,6 +7,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: SITE_URL, changeFrequency: "monthly", priority: 1 },
     { url: `${SITE_URL}/services`, changeFrequency: "monthly", priority: 0.9 },
     {
+      url: `${SITE_URL}/services/seo-for-manufacturers`,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${SITE_URL}/services/lead-generation-for-manufacturers`,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
       url: `${SITE_URL}/marketing-agency-for-manufacturing`,
       changeFrequency: "monthly",
       priority: 0.8,

@@ -1,11 +1,14 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import Reveal from "@/components/Reveal";
 
 interface Service {
   title: string;
   description: string;
+  href?: string;
+  linkLabel?: string;
 }
 
 export default function ServicesAccordion({ services }: { services: Service[] }) {
@@ -58,6 +61,24 @@ export default function ServicesAccordion({ services }: { services: Service[] })
                     <p className="max-w-xl font-body text-[15px] leading-relaxed text-white/60">
                       {service.description}
                     </p>
+                    {service.href && (
+                      <Link
+                        href={service.href}
+                        tabIndex={isOpen ? undefined : -1}
+                        className="mt-4 inline-flex items-center gap-2 font-body text-sm font-semibold text-brand transition-colors hover:text-cream"
+                      >
+                        <span>{service.linkLabel ?? "Learn more"}</span>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                          <path
+                            d="M3 8h10M9 4l4 4-4 4"
+                            stroke="currentColor"
+                            strokeWidth="1.6"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
+                      </Link>
+                    )}
                   </div>
                 </div>
               </div>

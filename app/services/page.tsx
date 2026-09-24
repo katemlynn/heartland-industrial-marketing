@@ -28,11 +28,15 @@ const SERVICES = [
     title: "SEO",
     description:
       "Long-term, compounding traffic from buyers actively searching for what you sell. We focus on the keywords that drive quote requests, not vanity rankings. Most metals companies see results compound over three to six months.",
+    href: "/services/seo-for-manufacturers",
+    linkLabel: "SEO for manufacturers",
   },
   {
     title: "Lead Generation",
     description:
       "A complete lead engine that combines search, social, and signage into a single inbound system. We don't just turn on ads. We build the full funnel from impression to closed quote, with reporting you can actually read.",
+    href: "/services/lead-generation-for-manufacturers",
+    linkLabel: "Lead generation for manufacturers",
   },
   {
     title: "Organic & Paid Social",
